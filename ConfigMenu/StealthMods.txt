@@ -1,0 +1,36 @@
+{
+	"menu_id" 			: "tSS_options_StealthMods",
+	"parent_menu_id" 	: "tSS_options",
+	"title" 			: "Config_StealthMods",
+	"description" 		: "",
+	"back_callback" 	: "tSS_Close_Options",
+	"items" : [
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_GuardsCamera",
+			"title" 		: "Config_GuardsCamera_Title",
+			"description" 	: "Config_GuardsCamera_Desc",
+			"value" 		: "GuardsCamera",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_NoPager",
+			"title" 		: "Config_NoPager_Title",
+			"description" 	: "Config_NoPager_Desc",
+			"value" 		: "NoPager",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_InfiniteAnswer",
+			"title" 		: "Config_InfiniteAnswer_Title",
+			"description" 	: "Config_InfiniteAnswer_Desc",
+			"value" 		: "InfiniteAnswer",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		}
+	]
+}

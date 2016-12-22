@@ -1,0 +1,127 @@
+{
+	"menu_id" 			: "tSS_options_WeaponMods",
+	"parent_menu_id" 	: "tSS_options",
+	"title" 			: "Config_WeaponMods_Options",
+	"description" 		: "",
+	"back_callback" 	: "tSS_Close_Options",
+	"items" : [
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_WeaponMods",
+			"title" 		: "Config_WeaponMods_Title",
+			"description" 	: "Config_WeaponMods_Desc",
+			"value" 		: "WeaponMods",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_InfiniteAmmoClip",
+			"title" 		: "Config_InfiniteAmmoClip_Title",
+			"description" 	: "Config_InfiniteAmmoClip_Desc",
+			"value" 		: "InfiniteAmmoClip",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_NoRecoil",
+			"title" 		: "Config_NoRecoil_Title",
+			"description" 	: "Config_NoRecoil_Desc",
+			"value" 		: "NoRecoil",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_ShootShield",
+			"title" 		: "Config_ShootShield_Title",
+			"description" 	: "Config_ShootShield_Desc",
+			"value" 		: "ShootShield",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_ShootEnemy",
+			"title" 		: "Config_ShootEnemy_Title",
+			"description" 	: "Config_ShootEnemy_Desc",
+			"value" 		: "ShootEnemy",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_ShootWall",
+			"title" 		: "Config_ShootWall_Title",
+			"description" 	: "Config_ShootWall_Desc",
+			"value" 		: "ShootWall",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_ShieldKnock",
+			"title" 		: "Config_ShieldKnock_Title",
+			"description" 	: "Config_ShieldKnock_Desc",
+			"value" 		: "ShieldKnock",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_ShootStagger",
+			"title" 		: "Config_ShootStagger_Title",
+			"description" 	: "Config_ShootStagger_Desc",
+			"value" 		: "ShootStagger",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_ShootSuppression",
+			"title" 		: "Config_ShootSuppression_Title",
+			"description" 	: "Config_ShootSuppression_Desc",
+			"value" 		: "ShootSuppression",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{ "type" : "divider", "size" : 20 },
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_SentryGunGodMode",
+			"title" 		: "Config_SentryGunGodMode_Title",
+			"description" 	: "Config_SentryGunGodMode_Desc",
+			"value" 		: "SentryGunGodMode",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_SentryGunSpread",
+			"title" 		: "Config_SentryGunSpread_Title",
+			"description" 	: "Config_SentryGunSpread_Desc",
+			"value" 		: "SentryGunSpread",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_SentryGunFireRate",
+			"title" 		: "Config_SentryGunFireRate_Title",
+			"description" 	: "Config_SentryGunFireRate_Desc",
+			"value" 		: "SentryGunFireRate",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_SentryGunAmmo",
+			"title" 		: "Config_SentryGunAmmo_Title",
+			"description" 	: "Config_SentryGunAmmo_Desc",
+			"value" 		: "SentryGunAmmo",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		}
+	]
+}

@@ -1,0 +1,83 @@
+{
+	"menu_id" 			: "tSS_options_Other",
+	"parent_menu_id" 	: "tSS_options",
+	"title" 			: "Config_Other_Title",
+	"description" 		: "Config_Other_Desc",
+	"back_callback" 	: "tSS_Close_Options",
+	"items" : [
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_Debug",
+			"title" 		: "Config_Debug_Title",
+			"description" 	: "Config_Debug_Desc",
+			"value" 		: "Debug",
+			"default_value" : false,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_TextUpper",
+			"title" 		: "Config_TextUpper_Title",
+			"description" 	: "Config_TextUpper_Desc",
+			"value" 		: "TextUpper",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{ "type" : "divider", "size" : 20 },
+		{
+			"type" 			: "slider",
+			"id" 			: "tSS_GiveXP",
+			"title" 		: "Config_GiveXP_Title",
+			"description" 	: "Config_GiveXP_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"value" 		: "GiveXP",
+			"default_value" : 300,
+			"max" 			: 1000,
+			"min" 			: 1,
+			"step" 			: 5
+		},
+		{
+			"type" 			: "slider",
+			"id" 			: "tSS_GiveMoney",
+			"title" 		: "Config_GiveMoney_Title",
+			"description" 	: "Config_GiveMoney_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"value" 		: "GiveMoney",
+			"default_value" : 10000,
+			"max" 			: 100000,
+			"min" 			: 500,
+			"step" 			: 100
+		},
+		{ "type" : "divider", "size" : 20 },
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_InGameMap",
+			"title" 		: "Config_InGameMap_Title",
+			"description" 	: "Config_InGameMap_Desc",
+			"value" 		: "InGameMap",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_InGameMapRotate",
+			"title" 		: "Config_InGameMapRotate_Title",
+			"description" 	: "Config_InGameMapRotate_Desc",
+			"value" 		: "InGameMapRotate",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "slider",
+			"id" 			: "tSS_InGameMapZoom",
+			"title" 		: "Config_InGameMapZoom_Title",
+			"description" 	: "Config_InGameMapZoom_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"value" 		: "InGameMapZoom",
+			"default_value" : 1.0,
+			"max" 			: 4.0,
+			"min" 			: 0.5,
+			"step" 			: 0.1
+		}
+	]
+}

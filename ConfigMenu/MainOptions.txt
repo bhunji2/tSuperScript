@@ -1,0 +1,32 @@
+{
+	"menu_id" 			: "tSS_options",
+	"parent_menu_id" 	: "lua_mod_options_menu",
+	"title" 			: "tSS_options_title",
+	"description" 		: "tSS_options_menu_desc",
+	"back_callback" 	: "tSS_Close_Options",
+	"items" : [
+		{
+			"type" 			: "multiple_choice",
+			"id" 			: "tSS_Lang",
+			"title" 		: "Config_tSS_Lang_Title",
+			"description" 	: "Config_tSS_Lang_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"items" 		: [
+				"tSS_Lang_1",
+				"tSS_Lang_2",
+				"tSS_Lang_3"
+			],
+			"value"			: "Lang",
+			"default_value" : 1
+		},
+		{ "type" : "divider", "size" : 20 },
+		{
+			"type"			: "button",
+			"id" 			: "tSS_ResetDefault",
+			"title" 		: "Config_tSS_ResetDefault_Title"
+			"description" 	: "Config_tSS_ResetDefault_Desc",
+			"callback" 		: "Config_Reset"
+		},
+		{ "type" : "divider", "size" : 20 }
+	]
+}

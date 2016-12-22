@@ -1,0 +1,141 @@
+{
+	"menu_id" 			: "tSS_options_sec",
+	"parent_menu_id" 	: "tSS_options",
+	"title" 			: "Config_Adv_Options",
+	"description" 		: "",
+	"back_callback" 	: "tSS_Close_Options",
+	"items" : [
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_InfiniteCableTies",
+			"title" 		: "Config_InfiniteCableTies_Title",
+			"description" 	: "Config_InfiniteCableTies_Desc",
+			"value" 		: "InfiniteCableTies",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_InfiniteEquipment",
+			"title" 		: "Config_InfiniteEquipment_Title",
+			"description" 	: "Config_InfiniteEquipment_Desc",
+			"value" 		: "InfiniteEquipment",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_DoctorBag",
+			"title" 		: "Config_DoctorBag_Title",
+			"description" 	: "Config_DoctorBag_Desc",
+			"value" 		: "DoctorBag",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_SentryGun",
+			"title" 		: "Config_SentryGun_Title",
+			"description" 	: "Config_SentryGun_Desc",
+			"value" 		: "SentryGun",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_FastDrilling",
+			"title" 		: "Config_FastDrilling_Title",
+			"description" 	: "Config_FastDrilling_Desc",
+			"value" 		: "FastDrilling",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_DeadCiviNone",
+			"title" 		: "Config_DeadCiviNone_Title",
+			"description" 	: "Config_DeadCiviNone_Desc",
+			"value" 		: "DeadCiviNone",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_Carrymods",
+			"title" 		: "Config_Carrymods_Title",
+			"description" 	: "Config_Carrymods_Desc",
+			"value" 		: "Carrymods",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_SecureBag",
+			"title" 		: "Config_SecureBag_Title",
+			"description" 	: "Config_SecureBag_Desc",
+			"value" 		: "SecureBag",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_InstantMask",
+			"title" 		: "Config_InstantMask_Title",
+			"description" 	: "Config_InstantMask_Desc",
+			"value" 		: "InstantMask",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_MaskOff",
+			"title" 		: "Config_MaskOff_Title",
+			"description" 	: "Config_MaskOff_Desc",
+			"value" 		: "MaskOff",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "slider",
+			"id" 			: "tSS_InteractRange",
+			"title" 		: "Config_InteractRange_Title",
+			"description" 	: "Config_InteractRange_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"value" 		: "InteractRange",
+			"default_value" : 500,
+			"max" 			: 20000,
+			"min" 			: 200,
+			"step" 			: 50
+		},
+		{
+			"type" 			: "slider",
+			"id" 			: "tSS_JobShow",
+			"title" 		: "Config_JobShow_Title",
+			"description" 	: "Config_JobShow_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"value" 		: "JobShow",
+			"default_value" : 1.0,
+			"max" 			: 5.0,
+			"min" 			: 0.1,
+			"step" 			: 0.1
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_MarkEnemies",
+			"title" 		: "Config_MarkEnemies_Title",
+			"description" 	: "Config_MarkEnemies_Desc",
+			"value" 		: "MarkEnemies",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_SecureBodyBag",
+			"title" 		: "Config_SecureBodyBag_Title",
+			"description" 	: "Config_SecureBodyBag_Desc",
+			"value" 		: "SecureBodyBag",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		}
+	]
+}

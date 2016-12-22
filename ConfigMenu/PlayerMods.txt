@@ -1,0 +1,98 @@
+{
+	"menu_id" 			: "tSS_options_PlayerMods",
+	"parent_menu_id" 	: "tSS_options",
+	"title" 			: "Config_PlayerMods",
+	"description" 		: "",
+	"back_callback" 	: "tSS_Close_Options",
+	"items" : [
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_GodMode",
+			"title" 		: "Config_GodMode_Title",
+			"description" 	: "Config_GodMode_Desc",
+			"value" 		: "GodMode",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_PlayerArmor",
+			"title" 		: "Config_PlayerArmor_Title",
+			"description" 	: "Config_PlayerArmor_Desc",
+			"value" 		: "PlayerArmor",
+			"default_value" : false,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_PlayerMods",
+			"title" 		: "Config_PlayerMods_Title",
+			"description" 	: "Config_PlayerMods_Desc",
+			"value" 		: "PlayerMods",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "multiple_choice",
+			"id" 			: "tSS_SuperJump",
+			"title" 		: "Config_SuperJump_Title",
+			"description" 	: "Config_SuperJump_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"items" : [
+				"tSS_SuperJump_1",
+				"tSS_SuperJump_2",
+				"tSS_SuperJump_3"
+			],
+			"value" 		: "SuperJump",
+			"default_value" : 3
+		},
+		{
+			"type" 			: "slider",
+			"id" 			: "tSS_MoveSpeed",
+			"title" 		: "Config_MoveSpeed_Title",
+			"description" 	: "Config_MoveSpeed_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"value" 		: "MoveSpeed",
+			"default_value" : 1.5,
+			"max" 			: 10.0,
+			"min" 			: 1.0,
+			"step" 			: 0.1
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_NoArrested",
+			"title" 		: "Config_NoArrested_Title",
+			"description" 	: "Config_NoArrested_Desc",
+			"value" 		: "NoArrested",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_NoCustody",
+			"title" 		: "Config_NoCustody_Title",
+			"description" 	: "Config_NoCustody_Desc",
+			"value" 		: "NoCustody",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_Upgrade",
+			"title" 		: "Config_Upgrade_Title",
+			"description" 	: "Config_Upgrade_Desc",
+			"value" 		: "Upgrade",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_NoEXPshake",
+			"title" 		: "Config_NoEXPshake_Title",
+			"description" 	: "Config_NoEXPshake_Desc",
+			"value" 		: "NoEXPshake",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		}
+	]
+}

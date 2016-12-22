@@ -1,0 +1,120 @@
+{
+	"name" 			: "tSuperScript",
+	"description" 	: "Super Script Integrated by Tast",
+	"author" 		: "Tast",
+	"contact" 		: "",
+	"version" 		: "1.0",
+	"hooks": [
+		{"hook_id": "lib/setups/setup"					,"script_path": "Auto/Setup.lua"				},
+		
+		{"hook_id": "lib/managers/experiencemanager"	,"script_path": "Auto/ExperienceManager.lua"	},
+		{"hook_id": "lib/states/ingamemaskoff"			,"script_path": "Auto/ingameState.lua"			},
+		{"hook_id": "lib/states/ingamestandard"			,"script_path": "Auto/ingameState.lua"			},
+		{"hook_id": "lib/states/ingamecivilian"			,"script_path": "Auto/ingameState.lua"			},
+		{"hook_id": "lib/states/ingameclean"			,"script_path": "Auto/IngameState.lua"			},
+		
+		{"hook_id": "lib/states/ingameincapacitated"	,"script_path": "Auto/IngameState.lua"			},
+		{"hook_id": "lib/states/ingamefatalstate"		,"script_path": "Auto/IngameState.lua"			},
+		
+		{"hook_id": "lib/managers/missionassetsmanager"	,"script_path": "Auto/MissionAssetsManager.lua"	},
+		{"hook_id": "lib/managers/moneymanager"			,"script_path": "Auto/MoneyManager.lua"			},
+		{"hook_id": "lib/managers/preplanningmanager"	,"script_path": "Auto/PreplanningManager.lua"	},
+		{"hook_id": "lib/managers/upgradesmanager"		,"script_path": "Auto/upgradesmanager.lua"		},
+		
+		{"hook_id": "lib/managers/playermanager"		,"script_path": "Auto/playermanager.lua"		},
+		{"hook_id": "lib/tweak_data/skilltreetweakdata"	,"script_path": "Auto/ForceAnySkill.lua"		},
+		{"hook_id": "lib/managers/skilltreemanager"		,"script_path": "Auto/SkillTreeManager.lua"		}
+	],
+	"keybinds" : [
+		{
+            "keybind_id" 	: "tSuperScript_Debug",
+            "name" 			: "Super Script Debuger",
+            "description" 	: "Super Script Debuger",
+            "script_path" 	: "KeyBind/Debuger.lua",
+            "run_in_menu" 	: true,
+            "run_in_game" 	: true,
+            "localized" 	: false
+		},
+		{
+            "keybind_id" 	: "tSuperScript_Test",
+            "name" 			: "Super Script Test",
+            "description" 	: "Super Script Test",
+            "script_path" 	: "KeyBind/TestFun.lua",
+            "run_in_menu" 	: true,
+            "run_in_game" 	: true,
+            "localized" 	: false
+		},
+		{
+            "keybind_id" 	: "tSuperScript_QuickMenu",
+            "name" 			: "Super Script QuickMenu",
+            "description" 	: "Super Script QuickMenu",
+            "script_path" 	: "tQuickMenu.lua",
+            "run_in_menu" 	: true,
+            "run_in_game" 	: true,
+            "localized" 	: false
+		},
+        {
+            "keybind_id" 	: "tSuperScript_INSERT",
+            "name" 			: "insert Super Script",
+            "description" 	: "insert Super Script",
+            "script_path" 	: "tSuperScript.lua",
+            "run_in_menu" 	: true,
+            "run_in_game" 	: true,
+            "localized" 	: false
+        },
+		{
+            "keybind_id" 	: "tSuperScript_Warp",
+            "name" 			: "Warp to crosshair no through Wall",
+            "description" 	: "Penetrative warp to crosshair no through Wall",
+            "script_path" 	: "KeyBind/WarpNoWall.lua",
+            "run_in_menu" 	: false,
+            "run_in_game" 	: true,
+            "localized" 	: false
+        },
+		{
+            "keybind_id" 	: "tSuperScript_WarpWall",
+            "name" 			: "Warp to crosshair through Wall",
+            "description" 	: "Penetrative warp to crosshair through Wall",
+            "script_path" 	: "KeyBind/WarpWall.lua",
+            "run_in_menu" 	: false,
+            "run_in_game" 	: true,
+            "localized" 	: false
+        },
+		{
+            "keybind_id"	: "tSuperScript_Nuke",
+            "name" 			: "NukeUnit",
+            "description" 	: "Nuke All people",
+            "script_path" 	: "KeyBind/NukeUnit.lua",
+            "run_in_menu" 	: false,
+            "run_in_game" 	: true,
+            "localized" 	: false
+		},
+		{
+            "keybind_id" 	: "tSuperScript_EndMission",
+            "name" 			: "EndMission",
+            "description" 	: "EndMission",
+            "script_path" 	: "KeyBind/EndMission.lua",
+            "run_in_menu" 	: false,
+            "run_in_game" 	: true,
+            "localized" 	: false
+		},
+		{
+            "keybind_id" 	: "tSuperScript_AmmoHealth",
+            "name" 			: "replenish Ammo Health",
+            "description" 	: "replenish ammo and health",
+            "script_path" 	: "KeyBind/replenish.lua",
+            "run_in_menu" 	: false,
+            "run_in_game" 	: true,
+            "localized" 	: false
+		},
+		{
+            "keybind_id" 	: "tSuperScript_UnlockThings",
+            "name" 			: "Unlock many things",
+            "description" 	: "Unlock many things",
+            "script_path" 	: "KeyBind/UnlockThing.lua",
+            "run_in_menu" 	: true,
+            "run_in_game" 	: true,
+            "localized" 	: false
+		}
+    ]
+}

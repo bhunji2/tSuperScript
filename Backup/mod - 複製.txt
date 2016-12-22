@@ -1,0 +1,31 @@
+{
+	"name" : "Inf_ammo",
+	"description" : "ccc",
+	"author" : "ccc",
+	"contact" : "",
+	"version" : "1.0",
+	"updates" : [
+		{
+			"revision" : 1,
+			"identifier" : "Inf_ammo"
+		}
+	],
+	"hooks" : 
+	[
+		{
+            "hook_id" : "lib/setups/gamesetup",
+            "script_path" : "Inf_ammo.lua"
+        }
+	],
+	"keybinds" : [
+        {
+            "keybind_id" : "insert",
+            "name" : "insert Super Script",
+            "description" : "An example keybind for demonstration"
+            "script_path" : "Inf_ammo.lua",
+            "run_in_menu" : true,
+            "run_in_game" : true,
+            "localized" : false
+        }
+    ]
+}
