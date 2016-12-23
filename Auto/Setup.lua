@@ -46,6 +46,7 @@ _G.tSuperScriptSet_Default = {
 ,["JobShow"] 			= 1.0	-- 任務出現速率(雜亂模式) 單位為秒
 ,["MarkEnemies"] 		= true	-- 標記警察、市民、監視器發亮
 ,["SecureBodyBag"]		= true	-- 屍袋可被確保換錢
+,["MarkObject"]			= true	-- 任務物品標記 v2.7 ( 功能作者：gir489 ) 
 -- Other Mods
 ,["TextUpper"]			= true	-- 關閉遊戲英文全部大寫
 ,["GiveXP"]				= 300	-- 強制過關獲得多少經驗：千單位倍數

@@ -29,6 +29,9 @@
 		
 		{"hook_id": "lib/units/enemies/cop/logics/coplogicidle","script_path": "Auto/Logic.lua"				}
 	],
+	"persist_scripts" : [
+		{"global" : "tSS_Noclip_Toggle"					, "script_path" : "SubFunction/Noclip.lua" 			}
+	],
 	"keybinds" : [
 		{
             "keybind_id" 	: "tSuperScript_Debug",
@@ -134,6 +137,15 @@
             "name" 			: "tSS_KeyBind_SuperInteract",
             "description" 	: "tSS_KeyBind_SuperInteract",
             "script_path" 	: "KeyBind/SuperInteract.lua",
+            "run_in_menu" 	: true,
+            "run_in_game" 	: true,
+            "localized" 	: true
+		},
+		{
+            "keybind_id" 	: "tSuperScript_Noclip",
+            "name" 			: "tSS_KeyBind_Noclip",
+            "description" 	: "tSS_KeyBind_Noclip",
+            "script_path" 	: "KeyBind/NoclipToggle.lua",
             "run_in_menu" 	: true,
             "run_in_game" 	: true,
             "localized" 	: true

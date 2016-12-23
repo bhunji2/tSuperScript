@@ -33,11 +33,9 @@ for i, unit in pairs(World:find_units_quick("all")) do
 	end
 end  
 ]]
-
 for _,v in pairs(managers.interaction._interactive_units) do
     log(tostring(v:interaction().tweak_data))
 end
-
 
 
 

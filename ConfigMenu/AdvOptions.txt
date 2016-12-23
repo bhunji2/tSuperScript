@@ -136,6 +136,15 @@
 			"value" 		: "SecureBodyBag",
 			"default_value" : true,
 			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_MarkObject",
+			"title" 		: "Config_MarkObject_Title",
+			"description" 	: "Config_MarkObject_Desc",
+			"value" 		: "MarkObject",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
 		}
 	]
 }

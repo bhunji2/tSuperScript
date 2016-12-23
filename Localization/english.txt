@@ -103,6 +103,8 @@
 		,"Config_MarkEnemies_Desc" 			: "Mark Enemies"
 		,"Config_SecureBodyBag_Title"		: "Secure BodyBag"
 		,"Config_SecureBodyBag_Desc"		: "BodyBag with money when secured"
+		,"Config_MarkObject_Title"			: "Mark mission objects"
+		,"Config_MarkObject_Desc"			: "develop by gir489"
 	
 	,"Config_Other_Title" 				: "Other Options"
 	,"Config_Other_Desc" 				: "Special Settings"
@@ -149,7 +151,7 @@
 	,"tSS_KeyBind_ConvertN"		: "Convert Enemy"
 	,"tSS_KeyBind_ConvertD"		: "Convert all Enemy to Criminal"
 	,"tSS_KeyBind_SuperInteract": "Interact everything"
-	
+	,"tSS_KeyBind_Noclip"		: "Walk Noclip toggle"
 }
 
 

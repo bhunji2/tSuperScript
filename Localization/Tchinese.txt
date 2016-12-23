@@ -103,6 +103,8 @@
 		,"Config_MarkEnemies_Desc" 			: "標記警察、市民、監視器發亮"
 		,"Config_SecureBodyBag_Title"		: "屍袋可被確保換錢"
 		,"Config_SecureBodyBag_Desc"		: "屍袋可被確保換錢 ( 特殊地圖除外 )"
+		,"Config_MarkObject_Title"			: "任務物品標記"
+		,"Config_MarkObject_Desc"			: "v2.7 ( 功能作者：gir489 ) "
 	
 	,"Config_Other_Title" 			: "其他選項"
 	,"Config_Other_Desc" 			: "其他特殊功能"
@@ -147,6 +149,7 @@
 	,"tSS_KeyBind_ConvertN"		: "轉換敵人"
 	,"tSS_KeyBind_ConvertD"		: "把所有敵人轉換成罪犯隊友"
 	,"tSS_KeyBind_SuperInteract": "所有物件快速互動"
+	,"tSS_KeyBind_Noclip"		: "走路穿牆飛翔"
 }
 
 

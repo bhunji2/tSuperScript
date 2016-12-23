@@ -46,6 +46,7 @@ if IsInGame() and IsPlaying() then
 	if _G.tSuperScriptSet["MarkEnemies"	] == true then dofile(SubPath.."MarkEnemies.lua") 			end
 	if _G.tSuperScriptSet["Carrymods"	] == true then dofile(SubPath.."CarryMods.lua") 			end
 	if _G.tSuperScriptSet["SecureBag"	] == true then dofile(SubPath.."SecureBag.lua") 			end
+	if _G.tSuperScriptSet["MarkObject"	] == true then dofile(SubPath.."waypoints.lua") 			end
 	dofile(SubPath.."WeaponMods.lua")
 	dofile(SubPath.."PlayerMods.lua")
 	dofile(SubPath.."SuperJump.lua")
