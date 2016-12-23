@@ -146,7 +146,7 @@
             "name" 			: "tSS_KeyBind_Noclip",
             "description" 	: "tSS_KeyBind_Noclip",
             "script_path" 	: "KeyBind/NoclipToggle.lua",
-            "run_in_menu" 	: true,
+            "run_in_menu" 	: false,
             "run_in_game" 	: true,
             "localized" 	: true
 		}

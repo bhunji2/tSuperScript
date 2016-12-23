@@ -11,6 +11,7 @@ if  _tSS_Noclip_Toggle == nil then
 end
 
 if not managers.player:player_unit() then
+	tSS_Noclip_Toggle = false
 	return
 end
 
