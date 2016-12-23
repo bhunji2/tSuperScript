@@ -1,4 +1,4 @@
-dofile("mods/tSuperScript/tCommon.lua")
+dofile(tSuperScript.Dir .. "/tCommon.lua")
 -- http://www.unknowncheats.me/forum/payday-2/115775-big-oil-correct-fusion-engine-revealer.html
 -- REVEAL CORRECT FUSION ENGINE v0.1 by B1313 [HOST ONLY]
 if managers.job:current_level_id() == "welcome_to_the_jungle_2" then

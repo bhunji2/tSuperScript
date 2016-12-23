@@ -1,4 +1,4 @@
---dofile("mods/tSuperScript/tCommon.lua")
+_G.tSuperScript = _G.tSuperScript or { Dir = ModPath }
 ------------------------------------------------------------------------------------------------------------------------
 _G.tSuperScriptSet_Default = { 
  ["Debug"] 				= false	-- 腳本除錯用
@@ -138,8 +138,8 @@ Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_tSuperScri
 	--LocOutputAll()
 	local AR_Loc  = { "english" , "Tchinese" , "Schinese" }
 	local LocFile = AR_Loc[_G.tSuperScriptSet["Lang"]]
-	loc:load_localization_file("mods/tSuperScript/Localization/english.txt")
-	loc:load_localization_file("mods/tSuperScript/Localization/"..LocFile..".txt")
+	loc:load_localization_file(tSuperScript.Dir .. "/Localization/english.txt")
+	loc:load_localization_file(tSuperScript.Dir .. "/Localization/"..LocFile..".txt")
 	
 	--_G.SaveTable(loc._custom_localizations,"_custom_localizations.txt")
 	

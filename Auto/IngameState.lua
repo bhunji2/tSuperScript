@@ -60,9 +60,9 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 --InGame Auto Script
 function ExecuteScript()
-	if not _G.tSuperScript then
-		dofile(ModPath.."/../tSuperScript/tSuperScript.lua")
-		_G.tSuperScript = true
+	if not _G.tSuperScriptState then
+		dofile(tSuperScript.Dir .. "/tSuperScript.lua")
+		_G.tSuperScriptState = true
 	end
 end
 

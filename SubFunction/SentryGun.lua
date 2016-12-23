@@ -1,4 +1,3 @@
---dofile("mods/tSuperScript/tCommon.lua")
 
 function SentryGunWeapon:out_of_ammo()
 	if self._ammo_total then 

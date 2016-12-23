@@ -1,4 +1,4 @@
-dofile("mods/tSuperScript/tCommon.lua")
+dofile(tSuperScript.Dir .. "/tCommon.lua")
 log("tScript TEST")
 
 --managers.infamy:aquire_point()
@@ -33,9 +33,34 @@ for i, unit in pairs(World:find_units_quick("all")) do
 	end
 end  
 ]]
+
+local IgnoreList = { 
+	  "sc_tape_loop" 	--干擾監視器?
+	, "access_camera"	--觀看監視器
+	, "bag_zipline"		--袋子滑索
+	, "hostage_move"	--人質移動
+	, "intimidate"		--威嚇
+	, "hostage_stay"	--人質趴下
+	, "open_slash_close"--未知
+	, "ammo_bag"		--彈藥包
+	, "doctor_bag"		--醫療包
+	, "grenade_crate"	--榴彈包
+	, "player_zipline"	--玩家滑索
+	, "alaska_plane"	--阿拉司卡飛機?
+}
+
 for _,v in pairs(managers.interaction._interactive_units) do
-    log(tostring(v:interaction().tweak_data))
+	if not table.contains(IgnoreList, v:interaction().tweak_data) then
+		log(tostring(v:interaction().tweak_data))
+	end
 end
+
+
+
+
+
+
+
 
 
 

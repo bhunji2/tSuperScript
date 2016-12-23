@@ -1,4 +1,3 @@
---dofile("mods/tSuperScript/tCommon.lua")
 if not _G.tSuperScriptNukeNum then _G.tSuperScriptNukeNum = 0 end
 
 function nukeunit(pawn)

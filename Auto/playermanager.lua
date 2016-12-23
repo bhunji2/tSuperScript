@@ -1,6 +1,6 @@
 if not _G.tSuperScriptSet["Upgrade"] then return end
 
-dofile("mods/tSuperScript/tCommon.lua")
+dofile(tSuperScript.Dir .. "/tCommon.lua")
 --http://www.se7ensins.com/forums/threads/help-me-get-a-script-in-payday-2-plz.1046856/
 --	https://steamcommunity.com/app/218620/discussions/15/364042262874462999/
 

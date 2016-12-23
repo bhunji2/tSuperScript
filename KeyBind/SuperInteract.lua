@@ -1,4 +1,5 @@
-dofile("mods/tSuperScript/tCommon.lua")
+dofile(tSuperScript.Dir .. "/tCommon.lua")
+
 local IgnoreList = { 
 	  "sc_tape_loop" 	--干擾監視器?
 	, "access_camera"	--觀看監視器
@@ -11,6 +12,7 @@ local IgnoreList = {
 	, "doctor_bag"		--醫療包
 	, "grenade_crate"	--榴彈包
 	, "player_zipline"	--玩家滑索
+	, "alaska_plane"	--阿拉司卡飛機?
 }
 -- lib/managers/ObjectInteractionManager
 --https://www.unknowncheats.me/forum/payday-2-a/133804-revive-players-characters.html
@@ -48,7 +50,15 @@ for _,v in pairs(managers.interaction._interactive_units) do
 		v:interaction():interact(managers.player:player_unit()) 
     end
 end
-showH(tostring(InteractionCounter) .. " : InteractionCounter") 
+
+local InteractionCounterLeft = 0
+for _,v in pairs(managers.interaction._interactive_units) do
+	if not table.contains(IgnoreList, v:interaction().tweak_data) then
+		InteractionCounterLeft = InteractionCounterLeft + 1
+    end
+end
+
+showH(tostring(InteractionCounter) .. " / " .. InteractionCounterLeft .. " : InteractionCounter") 
 
 --[[
 --Revive/free all:

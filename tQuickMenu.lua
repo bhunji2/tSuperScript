@@ -1,4 +1,4 @@
-dofile("mods/tSuperScript/tCommon.lua")
+dofile(tSuperScript.Dir .. "/tCommon.lua")
 --http://www.unknowncheats.me/forum/payday-2-a/170053-simple-auto-message.html
 --https://github.com/JamesWilko/Payday-2-BLT-Lua/blob/master/mods/base/req/quick_menu.lua
 function SmallQuickMenu()
@@ -19,15 +19,16 @@ function SmallQuickMenu()
 	QuickMenu:new(title, message, options, true)
 end
 
+local path = tSuperScript.Dir .. "/KeyBind/"
 function SmallQuickMenuBack(data)
-	if data == 1 then managers.game_play_central:restart_the_game()			end
-	if data == 2 then dofile("mods/tSuperScript/KeyBind/EndMission.lua") 	end
-	if data == 3 then dofile("mods/tSuperScript/KeyBind/NukeUnit.lua") 		end
-	if data == 4 then dofile("mods/tSuperScript/KeyBind/replenish.lua") 	end
-	if data == 5 then dofile("mods/tSuperScript/KeyBind/UnlockThing.lua") 	end
-	if data == 6 then dofile("mods/tSuperScript/tSuperScript.lua") 			end
-	if data == 7 then dofile("mods/tSuperScript/KeyBind/Convert.lua") 		end
-	if data == 8 then dofile("mods/tSuperScript/KeyBind/SuperInteract.lua") end
+	if data == 1 then managers.game_play_central:restart_the_game() end
+	if data == 2 then dofile(path .. "EndMission.lua") 	end
+	if data == 3 then dofile(path .. "NukeUnit.lua") 	end
+	if data == 4 then dofile(path .. "replenish.lua") 	end
+	if data == 5 then dofile(path .. "UnlockThing.lua") end
+	if data == 6 then dofile(tSuperScript.Dir .. "/tSuperScript.lua") end
+	if data == 7 then dofile(path .. "Convert.lua")		end
+	if data == 8 then dofile(path .. "SuperInteract.lua") end
 end
 
 SmallQuickMenu()

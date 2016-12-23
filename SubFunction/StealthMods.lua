@@ -1,4 +1,4 @@
-dofile("mods/tSuperScript/tCommon.lua")
+dofile(tSuperScript.Dir .. "/tCommon.lua")
 
 if _G.tSuperScriptSet["GuardsCamera"] == true then
 -- Guards and Camera

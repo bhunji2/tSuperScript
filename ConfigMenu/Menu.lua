@@ -1,4 +1,4 @@
-dofile("mods/tSuperScript/tCommon.lua")
+dofile(tSuperScript.Dir .. "/tCommon.lua")
 
 local MenuFiles = 
 {
@@ -43,7 +43,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_tSuperScript", functio
 	end
 	
 	for Fs,Fn in pairs(MenuFiles) do 
-		MenuHelper:LoadFromJsonFile("mods/tSuperScript/ConfigMenu/"..Fn..".txt", _G.tSuperScriptFunc, _G.tSuperScriptSet)
+		MenuHelper:LoadFromJsonFile(tSuperScript.Dir .. "/ConfigMenu/"..Fn..".txt", _G.tSuperScriptFunc, _G.tSuperScriptSet)
 	end
 end)
 
@@ -52,7 +52,7 @@ function ResetDefault() _G.tSuperScriptFunc:Reset() end
 function LocReload()
 	local AR_Loc  = { "english" , "Tchinese" , "Schinese" }
 	local LocFile = AR_Loc[_G.tSuperScriptSet["Lang"]]
-	LocalizationManager:load_localization_file("mods/tSuperScript/Localization/"..LocFile..".txt")
+	LocalizationManager:load_localization_file(tSuperScript.Dir .. "/Localization/"..LocFile..".txt")
 end
 
 --[[

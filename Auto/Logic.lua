@@ -1,4 +1,3 @@
---dofile("mods/tSuperScript/tCommon.lua")
 --[[
 		{"hook_id": "lib/units/enemies/cop/logics/coplogicarrest","script_path": "Auto/Logic.lua"		},
 		{"hook_id": "lib/units/enemies/cop/logics/coplogicattack","script_path": "Auto/Logic.lua"		},

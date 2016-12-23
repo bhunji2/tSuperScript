@@ -1,4 +1,4 @@
-dofile("mods/tSuperScript/tCommon.lua")
+dofile(tSuperScript.Dir .. "/tCommon.lua")
 _G.tSuperScriptSet = _G.tSuperScriptSet or _G.tSuperScriptSet_Default
 ------------Main Control------------
 local InfiniteCableTies	= _G.tSuperScriptSet["InfiniteCableTies"]	
@@ -40,7 +40,7 @@ if SetLevel 	> 0 	then thenmanagers.experience:_set_current_level (SetLevel) 	 	
 if Perks 		> 0 	then managers.skilltree._global.specializations.points = Perks  end
 --managers.money:_set_offshore(9999)
 ---------------------------------------------------------------------------------------------------------------------------
-local SubPath = "mods/tSuperScript/SubFunction/"
+local SubPath = tSuperScript.Dir .. "/SubFunction/"
 if IsInGame() and IsPlaying() then
 	if _G.tSuperScriptSet["MaskOff"		] == true then dofile(SubPath.."PlayerMaskOffstarter.lua") 	end
 	if _G.tSuperScriptSet["MarkEnemies"	] == true then dofile(SubPath.."MarkEnemies.lua") 			end
@@ -281,7 +281,7 @@ if JobShow then
 end
 
 -- Message On Screen
-local tVersion = GetMetaData("version","mods/tSuperScript/")
+local tVersion = GetMetaData("version",tSuperScript.Dir)
 showH("Super Script v"..tVersion.." By Tast for BLT version")
 showS("Super Script v"..tVersion.." By Tast ( BLT )")
 
