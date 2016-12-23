@@ -22,13 +22,13 @@ end
 local path = tSuperScript.Dir .. "/KeyBind/"
 function SmallQuickMenuBack(data)
 	if data == 1 then managers.game_play_central:restart_the_game() end
-	if data == 2 then dofile(path .. "EndMission.lua") 	end
-	if data == 3 then dofile(path .. "NukeUnit.lua") 	end
-	if data == 4 then dofile(path .. "replenish.lua") 	end
-	if data == 5 then dofile(path .. "UnlockThing.lua") end
+	if data == 2 then dofile(path .. "EndMission.lua") 				end
+	if data == 3 then dofile(path .. "NukeUnit.lua") 				end
+	if data == 4 then dofile(path .. "replenish.lua") 				end
+	if data == 5 then dofile(path .. "UnlockThing.lua") 			end
 	if data == 6 then dofile(tSuperScript.Dir .. "/tSuperScript.lua") end
-	if data == 7 then dofile(path .. "Convert.lua")		end
-	if data == 8 then dofile(path .. "SuperInteract.lua") end
+	if data == 7 then dofile(path .. "Convert.lua")					end
+	if data == 8 then dofile(path .. "SuperInteract.lua") 			end
 end
 
 SmallQuickMenu()

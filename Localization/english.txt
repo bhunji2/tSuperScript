@@ -151,6 +151,7 @@
 	,"tSS_KeyBind_ConvertN"		: "Convert Enemy"
 	,"tSS_KeyBind_ConvertD"		: "Convert all Enemy to Criminal"
 	,"tSS_KeyBind_SuperInteract": "Interact everything"
+	,"tSS_KeyBind_SuperInteractMenu":"Interact everything but only type"
 	,"tSS_KeyBind_Noclip"		: "Walk Noclip toggle"
 }
 
