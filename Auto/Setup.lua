@@ -1,6 +1,6 @@
 _G.tSuperScript = _G.tSuperScript or { Dir = ModPath }
 ------------------------------------------------------------------------------------------------------------------------
-_G.tSuperScriptSet_Default = { 
+_G.tSuperScriptSet_Default = {
  ["Debug"] 				= false	-- 腳本除錯用
 ,["Lang"] 				= 1 	-- 語言設定(1 = 英文 , 2 = 繁體 , 3 = 簡體)
 -- Player Mods

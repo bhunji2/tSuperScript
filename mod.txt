@@ -30,7 +30,8 @@
 		{"hook_id": "lib/units/enemies/cop/logics/coplogicidle","script_path": "Auto/Logic.lua"				}
 	],
 	"persist_scripts" : [
-		{"global" : "tSS_Noclip_Toggle"					, "script_path" : "SubFunction/Noclip.lua" 			}
+		 {"global" : "tSS_Noclip_Toggle"					,"script_path": "SubFunction/Noclip.lua" 		}
+		/*,{"global" : "tSS_TestAuto"						,"script_path": "SubFunction/Test.lua" 				}*/
 	],
 	"keybinds" : [
 		{

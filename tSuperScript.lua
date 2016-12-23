@@ -57,6 +57,12 @@ if IsInGame() and IsPlaying() then
 end
 
 ---------------------------------------------------------------------------------------------------------------------------
+--[[
+function NewRaycastWeaponBase:got_silencer()
+    --return self._silencer
+end
+]]
+
 
 -- http://www.unknowncheats.me/forum/payday-2/122896-re-enable-crazy-firerate-grenade-launcher.html
 -- Removes grenade's launcher silly delay. Crazy firerate enabled again (though it will work only on host side)

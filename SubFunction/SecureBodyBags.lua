@@ -185,13 +185,12 @@ end
 IngameWaitingForPlayersState_at_exit = IngameWaitingForPlayersState_at_exit or IngameWaitingForPlayersState.at_exit
 function IngameWaitingForPlayersState:at_exit()
     IngameWaitingForPlayersState_at_exit(self)
-	--[[
+	
 	--local job_id = managers.job:current_job
 	local job_id = managers.job:current_real_job_id()
 	if job_id ~= "framing_frame_prof" then bodybagsecure() 	end
-	]]
 	
-	if managers.job:current_level_id() ~= "framing_frame_1" then bodybagsecure() end
+	--if managers.job:current_level_id() ~= "framing_frame_1" then bodybagsecure() end
 end
 
 
