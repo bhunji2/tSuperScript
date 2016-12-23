@@ -15,7 +15,8 @@ if col_ray then
 		mvector3.multiply(offset, 100)
 		mvector3.add(col_ray.hit_position, offset)
 	end
-	managers.player:warp_to(col_ray.hit_position, player_unit:rotation())
+	--managers.player:warp_to(col_ray.hit_position, player_unit:rotation())
+	managers.player:warp_to(col_ray.hit_position, camera:rotation())
 end
 --[[
 -- Warp to bullet

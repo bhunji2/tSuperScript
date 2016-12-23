@@ -6,6 +6,7 @@ local IgnoreList = {
 	, "hostage_move"	--人質移動
 	, "intimidate"		--威嚇
 	, "hostage_stay"	--人質趴下
+	, "open_slash_close"--未知
 }
 -- lib/managers/ObjectInteractionManager
 --https://www.unknowncheats.me/forum/payday-2-a/133804-revive-players-characters.html
@@ -43,7 +44,7 @@ for _,v in pairs(managers.interaction._interactive_units) do
 		v:interaction():interact(managers.player:player_unit()) 
     end
 end
-showH("InteractionCounter:" .. tostring(InteractionCounter)) 
+showH(tostring(InteractionCounter) .. " : InteractionCounter") 
 
 --[[
 --Revive/free all:
