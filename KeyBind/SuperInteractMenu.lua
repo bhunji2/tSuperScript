@@ -30,13 +30,12 @@ function InteractionMenu()
 	local TypeData	= {}
 	
 	table.insert(TypeData, {
-					 text 		= "Cancel"
-					,data 		= "Cancel"
-					,callback 	= InteractionMenuBack
-					,is_cancel_button = true
-				})
+		 text 		= "Cancel"
+		,data 		= "Cancel"
+		,callback 	= InteractionMenuBack
+		,is_cancel_button = true
+	})
 	
-	--local TypeData  = { [1] = { text = "Cancel" ,is_cancel_button = true ,data = "ccc"} }
 	for _,v in pairs(managers.interaction._interactive_units) do
 		if not table.contains(tSuperScript.InteractIgnoreList, v:interaction().tweak_data) then
 			if not TypeList[v:interaction().tweak_data] then
