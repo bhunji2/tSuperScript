@@ -30,16 +30,15 @@ for i, unit in pairs(World:find_units_quick("all")) do
 	end
 end  
 ]]
---[[
+
 for _,v in pairs(managers.interaction._interactive_units) do
 	if not table.contains(tSuperScript.InteractIgnoreList, v:interaction().tweak_data) then
 		log(tostring(v:interaction().tweak_data))
 	end
 end
-]]
 
 
-dofile(tSuperScript.Dir .. "Auto/update_mod.lua")
+--dofile(tSuperScript.Dir .. "Auto/update_mod.lua")
 
 --PrintTable(LuaModUpdates:GetModTable( "CHT_MOD" ))
 
