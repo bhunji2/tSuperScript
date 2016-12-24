@@ -3,8 +3,10 @@
 	"description" 	: "Tast's Super Script",
 	"author" 		: "Tast",
 	"contact" 		: "http://bbs.3dmgame.com/thread-5324774-1-1.html",
-	"version" 		: "1.60.1.4",
+	"version" 		: "1.61.0.1",
 	"hooks": [
+		{"hook_id": "lib/entry"							,"script_path": "Auto/update_mod.lua"				},
+		
 		{"hook_id": "core/lib/setups/coresetup"			,"script_path": "Auto/Setup.lua"					},
 		{"hook_id": "lib/managers/menumanager"			,"script_path": "ConfigMenu/Menu.lua"   			},
 		{"hook_id": "lib/managers/experiencemanager"	,"script_path": "Auto/ExperienceManager.lua"		},

@@ -48,6 +48,12 @@ function InteractionMenu()
 			end
 		end
 	end
+	
+	if #TypeData == 1 then
+		showH("No objects.")
+		return
+	end
+	
 	_InteractionMenu = QuickMenu:new(title, message, TypeData, true)
 	
 	if tSuperScriptSet["Debug"] then 

@@ -8,11 +8,9 @@ dohttpreq( "https://github.com/bhunji2/tSuperScript/archive/master.zip",
 		
 		local file = io.open( "mods/downloads/master.zip", "wb+" )
 		if file then file:write( data ) file:close() end
-		--[[
 		local zip = "mods/downloads/mod_overrides_CHT.zip"
 		local mods_folder = "mods/downloads"
 		unzip( zip, mods_folder )
-		]]
     end,
     function(id, bytes, total_bytes)
         log( id .. " downloaded " .. tostring(bytes) .. " / " .. tostring(total_bytes) .. " bytes")
@@ -41,8 +39,9 @@ end
 ]]
 
 
+dofile(tSuperScript.Dir .. "Auto/update_mod.lua")
 
-
+--PrintTable(LuaModUpdates:GetModTable( "CHT_MOD" ))
 
 
 

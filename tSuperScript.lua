@@ -61,6 +61,7 @@ end
 tSuperScript.InteractIgnoreList = { 
 	  "sc_tape_loop" 	--干擾監視器?
 	, "access_camera"	--觀看監視器
+	, "access_camera_y_axis"--觀看監視器
 	, "bag_zipline"		--袋子滑索
 	, "hostage_move"	--人質移動
 	, "intimidate"		--威嚇
