@@ -60,18 +60,18 @@
 --                    Fixed a crash when the user was the host on Big Oil Day 2 and they dropped the engine.
 --Configuration
 local showDistance        = false --Show distance below waypoint icon.
-local showGagePackages    = false --Show gage packages.
-local showPlanks          = false --Show wood planks you put on the windows.
-local showSmallLoot       = false --Show small loot.
+local showGagePackages    = true --Show gage packages.
+local showPlanks          = true --Show wood planks you put on the windows.
+local showSmallLoot       = true --Show small loot.
 local showCrates          = true --Show loot crates as waypoints.
 local showDoors           = true --Show doors,
 local showCameraComputers = true --Show where the camera interface terminals are.
 local showDrills          = true --Show all drill locations on the map.
 local showThermite        = true --Show thermite use locations
-local showSewerManhole    = false --Show sewer manhole covers on maps that use them.
+local showSewerManhole    = true --Show sewer manhole covers on maps that use them.
 local showHUDMessages     = false --Display a message on the HUD with information pertaining to the waypoints.
 local makeNoise           = false --Make a tick noise when you toggle the script.
-local iterativeToggle     = false --Setting this to false will make it show all the waypoints when initially turned on. Setting it to true will try to group it.
+local iterativeToggle     = true --Setting this to false will make it show all the waypoints when initially turned on. Setting it to true will try to group it.
 local sheaterNewb         = true --This means you are willing to do some extra things that everyone can see, but will help you see certain mission elements
 
 --Define various colors
