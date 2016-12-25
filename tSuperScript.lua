@@ -76,8 +76,8 @@ tSuperScript.InteractIgnoreList = {
 	, "bodybags_bag"	--屍袋
 	, "push_button"		--互動按鈕
 	, "button_infopad"	--儀表版?
-	, "money_wrap_single_bundle" --金錢傳送道?
-	, "money_wrap"		--金錢傳送道?
+	--, "money_wrap_single_bundle" --單筆錢
+	--, "money_wrap"		--單筆錢
 	, "sentry_gun"		--機槍塔
 	, "sentry_gun_fire_mode" --機槍塔開火模式
 	, "red_open_shutters"--百葉窗
