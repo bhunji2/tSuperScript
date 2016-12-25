@@ -110,7 +110,7 @@ function LuaModUpdates:OnlineCheckVersion_tSS()
 	end)
 end
 
-DelayedCalls:Add( "OnlineCheckVersion_tSS", 1, LuaModUpdates:OnlineCheckVersion_tSS())
+DelayedCalls:Add( "OnlineCheckVersion_tSS", 2, LuaModUpdates:OnlineCheckVersion_tSS())
 
 
 
