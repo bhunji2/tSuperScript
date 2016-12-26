@@ -16,17 +16,16 @@ function SecurityCamera		:_set_suspicion_sound( suspicion_level )end
 function SecurityCamera		:clbk_call_the_police() 				end
 function CopMovement		:anim_clbk_police_called( unit ) 		end
 function GroupAIStateBase	:sync_event( event_id, blame_id ) 		end
-function GroupAIStateBase	:on_police_called( called_reason ) 		end 
+--function GroupAIStateBase	:on_police_called( called_reason ) 		end  -- player no mask on
 -- Makes guards & people in general stop calling the cops
 function GroupAIStateBase	:on_police_weapons_hot( called_reason ) end
 function GroupAIStateBase	:on_gangster_weapons_hot( called_reason ) end
-function GroupAIStateBase	:on_enemy_weapons_hot( is_delayed_callback ) end
+--function GroupAIStateBase	:on_enemy_weapons_hot( is_delayed_callback ) end -- player no mask on
 function GroupAIStateBase	:_clbk_switch_enemies_to_not_cool() 	end
-function CopLogicArrest._upd_enemy_detection( data ) 				end
-function CopLogicArrest._call_the_police( data, my_data, paniced ) 	end
-function CopLogicIdle.on_alert( data, alert_data ) 					end
-function CopLogicBase._get_logic_state_from_reaction( data, reaction ) return "idle" end
-
+function CopLogicArrest		._upd_enemy_detection( data ) 				end
+function CopLogicArrest		._call_the_police( data, my_data, paniced ) 	end
+function CopLogicIdle		.on_alert( data, alert_data ) 					end
+function CopLogicBase		._get_logic_state_from_reaction( data, reaction ) return "idle" end
 ---------------New
 function CivilianLogicFlee.clbk_chk_call_the_police( ignore_this, data ) end -- Stops civs from reporting you
 function CopLogicArrest._say_call_the_police( data, my_data ) end 
@@ -62,12 +61,12 @@ if _G.tSuperScriptSet["NoPager"] == true then
 	end
 end
 
--- Allow infinite pagers
-function GroupAIStateBase:on_successful_alarm_pager_bluff() end
 ---------------------------------------------------------------------------------------------------------------------------
-
 -- Allows answer pagers, bag corpses, and spot NPC's with the cameras as well as other features I'm sure
 if _G.tSuperScriptSet["InfiniteAnswer"] == true then
+	-- Allow infinite pagers
+	function GroupAIStateBase:on_successful_alarm_pager_bluff() end
+	
 	if not _setWhisper then _setWhisper = GroupAIStateBase.set_whisper_mode end
 	function GroupAIStateBase:set_whisper_mode( enabled )
 		--showD(IsServer())
@@ -107,4 +106,3 @@ if _G.tSuperScriptSet["InfiniteAnswer"] == true then
 	end
 
 end
-

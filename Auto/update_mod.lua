@@ -1,7 +1,5 @@
-if 	_update_mod_tSS then return end
-	_update_mod_tSS = true
 
-function LuaModUpdates.UpdateDownloadDialog_tSS( id, bytes, total_bytes )
+function LuaModUpdates:UpdateDownloadDialog_tSS( id, bytes, total_bytes )
 	LuaModUpdates:SetDownloadDialogKey( "bytes_downloaded", bytes or 0 )
 	LuaModUpdates:SetDownloadDialogKey( "bytes_total", total_bytes or 0 )
 end
@@ -97,6 +95,9 @@ function LuaModUpdates:VerifyVersion_tSS(current,new)
 end
 
 function LuaModUpdates:OnlineCheckVersion_tSS()
+	if 	_update_mod_tSS == nil then
+		_update_mod_tSS = true
+	
 	--log("//OnlineCheckVersion_tSS")
 	dohttpreq( "https://raw.githubusercontent.com/bhunji2/tSuperScript/master/mod.txt",
     function(data, id)
@@ -108,11 +109,15 @@ function LuaModUpdates:OnlineCheckVersion_tSS()
     end,function(id, bytes, total_bytes)
 		--log( id .. " downloaded " .. tostring(bytes) .. " / " .. tostring(total_bytes) .. " bytes")
 	end)
+	end
 end
+LuaModUpdates:OnlineCheckVersion_tSS()
 
-DelayedCalls:Add( "OnlineCheckVersion_tSS", 2, LuaModUpdates:OnlineCheckVersion_tSS())
-
-
+--[[
+if 	_update_mod_tSS == nil then
+	DelayedCalls:Add( "OnlineCheckVersion_tSS", 2, LuaModUpdates:OnlineCheckVersion_tSS())
+end
+]]
 
 
 

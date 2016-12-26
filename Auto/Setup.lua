@@ -135,15 +135,10 @@ tSuperScriptFunc:Load()
 ------------------------------------------------------------------------------------------------------------------------
 
 Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_tSuperScript", function(loc)
-	--LocOutputAll()
 	local AR_Loc  = { "english" , "Tchinese" , "Schinese" }
 	local LocFile = AR_Loc[_G.tSuperScriptSet["Lang"]]
 	loc:load_localization_file(tSuperScript.Dir .. "/Localization/english.txt")
 	loc:load_localization_file(tSuperScript.Dir .. "/Localization/"..LocFile..".txt")
-	
-	--_G.SaveTable(loc._custom_localizations,"_custom_localizations.txt")
-	
-	--LocOutputAll()
 end)
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -151,43 +146,8 @@ end)
 if _G.tSuperScriptSet["TextUpper"] == true then utf8.to_upper = function(text) return text end end
 
 --table.sort(sorted)
-------------------------------------------------------------------------------------------------------------------------
--- https://www.reddit.com/r/paydaytheheist/comments/2rql0m/payday_2_menu_mod_for_japanese_language/
-
-function LocOutputAll()
-local text_original = LocalizationManager.text
-local printStrings = true -- This will output all strings to a text file if true.
-local testAllStrings = 2 -- Change this number if you want help for finding string_ids so that you can replace them.
--- turning testAllStrings to 1 will set all unknown strings to their string_id. For example, Dallas's name will show up as "menu_russian".
--- turning testAllStrings to 2 will show the stringid with the actual string next to it. Dallas will show up as "menu russian: Dallas"
--- Setting it to 2 will turn the gui into an absolute clusterfuck, so make sure you actually know how to navigate the menus beforehard!
-      function LocalizationManager:text(string_id, ...)
-
-            if printStrings == true then
-                  string_print(string_id, text_original(self, string_id, ...))
-            end
-            return
-
-               string_id == "ID OF STRING" and "NEW STRING TO DISPLAY"
-            or string_id == "ID OF ANOTHER STRING" and "NEW STRING TO DISPLAY" -- repeat this "or string_id ..." process for each string you want to replace
-
-            or testAllStrings == 1 and string_id
-            or testAllStrings == 2 and string_id .. ": " .. text_original(self, string_id, ...)
-            or text_original(self, string_id, ...)
-    end
-
-function string_print(string_id, string_original)
-    local file = io.open("stringdump.txt", "a")
-    file:write(string_id .. "\n" .. string_original .. "\n\n")
-    file:close()
-end
-
-end
-
 
 ------------------------------------------------------------------------------------------------------------------------
-
-
 
 --[[
 function TabLen(T)

@@ -3,12 +3,14 @@ dofile(tSuperScript.Dir .. "/tCommon.lua")
 local WarpToDebug = false
 if not tSuperScriptSet["Debug"] then WarpToDebug = false end
 
+tSS_InteractionMode = false
+
 -- lib/managers/ObjectInteractionManager
 function RunInteraction(typeID,DoInteraction)
 	local InteractionCounter = 0
 	for _,v in pairs(managers.interaction._interactive_units) do
 		if typeID and v:interaction().tweak_data == typeID or not typeID then
-			if WarpToDebug then
+			if WarpToDebug or tSS_InteractionMode then
 				managers.player:warp_to(v:position(), managers.player:player_unit():camera():rotation())
 				return 0
 			end	
@@ -28,6 +30,11 @@ function InteractionMenuBack(data)
 	DelayedCalls:Add( "InteractionMenu", 0.3, InteractionMenu )
 end
 
+function SettSS_InteractionMode(data)
+	tSS_InteractionMode = not tSS_InteractionMode
+	InteractionMenu()
+end
+
 function InteractionMenu()
 	if tSuperScriptSet["Debug"] then
 		LocalizationManager:load_localization_file(tSuperScript.Dir .. "/Localization/Tchinese.txt")
@@ -41,11 +48,27 @@ function InteractionMenu()
 	local TypeData	= {}
 	
 	table.insert(TypeData, {
-		 text 		= "Cancel"
+		 text 		= GetLocText("tSS_InteractMenuCancel")
 		,data 		= "Cancel"
 		,callback 	= InteractionMenuBack
 		,is_cancel_button = true
 	})
+	
+	if tSS_InteractionMode then
+		table.insert(TypeData, {
+			 text 		= GetLocText("tSS_InteractMenu:WarpTo")
+			,data 		= "mode:WarpTo"
+			,callback 	= SettSS_InteractionMode
+		})
+	else
+		table.insert(TypeData, {
+			 text 		= GetLocText("tSS_InteractMenu:Interact")
+			,data 		= "mode:Interact"
+			,callback 	= SettSS_InteractionMode
+		})
+	end
+	
+	table.insert(TypeData, { text = "" })
 	
 	for _,v in pairs(managers.interaction._interactive_units) do
 		local InteractName = v:interaction().tweak_data
@@ -71,8 +94,8 @@ function InteractionMenu()
 		end
 	end
 	
-	if #TypeData == 1 then
-		showH("No objects.")
+	if #TypeData == 3 then
+		showH(GetLocText("tSS_InteractMenuNoObject"))
 		return
 	end
 	

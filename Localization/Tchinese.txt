@@ -123,6 +123,7 @@
 		,"Config_InGameMapZoom_Title"		: "遊戲中小地圖大小縮放"
 		,"Config_InGameMapZoom_Desc"		: "遊戲中小地圖縮放大小，預設：1.0 "
 		
+	/* 快速小選單 */
 	,"tSS_QuickMenu_Title" 				: "塔司特腳本快速選單"
 	,"tSS_QuickMenu_Message" 			: "選擇功能"
 	,"tSS_QuickMenu_Cancel" 			: "關閉快速選單"
@@ -135,6 +136,7 @@
 	,"tSS_QuickMenu_Convert" 			: "（轉換所有人）7. 警察變成隊友"
 	,"tSS_QuickMenu_Interact" 			: "（請小心使用）8. 全部物件互動"
 	
+	/* 按鍵類 */
 	,"tSS_KeyBind_Debugger"			: "塔司特腳本？除錯.t01"
 	,"tSS_KeyBind_Test"				: "塔司特腳本？測試.t02"
 	,"tSS_KeyBind_QuickMenu"		: "塔司特腳本？選單.t03"
@@ -151,6 +153,12 @@
 	,"tSS_KeyBind_SuperInteract"	: "所有物件快速互動.t12"
 	,"tSS_KeyBind_SuperInteractMenu": "特定類型物件互動.t13"
 	,"tSS_KeyBind_Noclip"			: "走路可以穿牆飛翔.t14"
+	
+	/* 物件互動選單 */
+	,"tSS_InteractMenuCancel"		: "取消"
+	,"tSS_InteractMenu:WarpTo"		: "傳送：模式"
+	,"tSS_InteractMenu:Interact"	: "互動：模式"
+	,"tSS_InteractMenuNoObjects"	: "無互動物件可用"
 	
 	/* 物件互動名稱翻譯 */
 	,"shaped_sharge" 			: "塑膠炸藥"
@@ -209,6 +217,13 @@
 	,"crate_loot"				: "打開貨箱"
 	,"hold_blow_torch"			: "焊切東西"
 	,"hold_release_hatch"		: "釋放艙門"
+	,"open_train_cargo_door"	: "開貨櫃門"
+	,"hold_activate_sprinklers"	: "開灑水器"
+	,"revive"					: "救起隊友"
+	,"debris"					: "移除碎塊"
+	/* */
+	,"hold_grab_goat"			: "帶走山羊"
+	,"goat_carry_drop"			: "山羊包裹"
 	/* The Big Bank */
 	,"fingerprint_scanner"		: "拇指掃描"
 	,"hospital_phone"			: "醫院電話"
@@ -218,7 +233,7 @@
 	,"hold_open_vault"			: "打開金庫"
 	,"hold_open_vent"			: "通風管蓋"
 	,"money_small_take"			: "拿錢"
-	/* Cook */
+	/* Cook off */
 	,"muriatic_acid"			: "鹽酸 Mu"
 	,"caustic_soda"				: "氫氧化鈉、苛性蘇打 NaOH Cs"
 	,"hydrogen_chloride"		: "氯化氫 HCL"
@@ -226,7 +241,7 @@
 	,"methlab_gas_to_salt"		: "添加氯化氫 HCL"
 	,"methlab_caustic_cooler"	: "添加苛性蘇打 Cs"
 	,"taking_meth"				: "拿走冰毒"
-	/* SC map */
+	/* Scarface Mansion */
 	,"hold_open_coke_bag"		: "古柯鹼包"
 	,"friend_pku_yayo_cocaine"	: "古柯鹼包"
 	,"hold_phone_call_office"	: "打個電話"

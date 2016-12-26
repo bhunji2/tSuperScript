@@ -1809,7 +1809,10 @@ if inGame() and isPlaying() then
 			_uldatabase_found = true
 		end
 		
-		RefreshItemWaypoints(false)
+		DelayedCalls:Add( "RefreshItemWaypoints", 1.0, function() 
+			RefreshItemWaypoints(false)
+		end )
+		
 		return result
 	end
 end
