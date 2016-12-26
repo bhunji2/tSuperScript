@@ -76,16 +76,16 @@ tSuperScript.InteractIgnoreList = {
 	, "bodybags_bag"	--屍袋
 	, "push_button"		--互動按鈕
 	, "button_infopad"	--儀表版?
-	--, "money_wrap_single_bundle" --單筆錢
-	--, "money_wrap"		--單筆錢
 	, "sentry_gun"		--機槍塔
 	, "sentry_gun_fire_mode" --機槍塔開火模式
 	, "red_open_shutters"--百葉窗
-	, "red_close_shutters"
+	, "red_close_shutters"--百葉窗
 	, "are_turn_on_tv"	--未知
-	, "open_slash_close"--未知
+	, "open_slash_close"--大垃圾箱
 	, "open_slash_close_act"--未知
-	, "invisible_interaction_open"
+	, "big_computer_not_hackable"
+	, "place_flare"		--爆燃 ( 毒師 )
+	, "open_from_inside"--裡面開門?
 }
 
 function LootManager:_present(carry_id, multiplier)
