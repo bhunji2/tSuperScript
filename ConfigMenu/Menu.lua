@@ -11,14 +11,7 @@ local MenuFiles =
 }
 
 Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_tSuperScript", function(menu_manager)
-	MenuCallbackHandler.tSS_Close_Options = function(this) 
-		--[[
-		--tSuperScriptFunc:Save() 
-		_G.tSuperScriptFunc.Save()
-		log("tSS_Close_Options")
-		_G.SaveTable(_G.tSuperScriptSet,"MenuTest3.ini")
-		]]
-	end
+	MenuCallbackHandler.tSS_Close_Options = function(this) end
 	
 	MenuCallbackHandler.callback_tSS_ValueSet = function(this, item)
 		--_G.SaveTable(_G.tSuperScriptSet,"MenuTest3.ini")

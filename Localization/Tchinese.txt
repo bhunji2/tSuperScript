@@ -123,6 +123,20 @@
 		,"Config_InGameMapZoom_Title"		: "遊戲中小地圖大小縮放"
 		,"Config_InGameMapZoom_Desc"		: "遊戲中小地圖縮放大小，預設：1.0 "
 		
+	,"tSS_Config_Auto"				: "自動觸發"
+		,"tSS_CustomSafehouse_AutoSet_T"	: "自訂安全屋"
+		,"tSS_CustomSafehouse_AutoSet_D"	: "安全屋：無花費、完成每日任務、解鎖小飾品"
+		,"tSS_MissionAssets_AutoSet_T"		: "任務輔助類"
+		,"tSS_MissionAssets_AutoSet_D"		: "任務輔助物品：購買無花費、可解鎖"
+		,"tSS_Preplanning_AutoSet_T"		: "預置計畫類"
+		,"tSS_Preplanning_AutoSet_D"		: "預置計畫物品：購買無花費、可解鎖"
+		,"tSS_ProJob_AutoSet_T"				: "專家任務類"
+		,"tSS_ProJob_AutoSet_D"				: "專家任務類：不需花費離岸金額"
+		,"tSS_LootSecure_AutoSet_T"			: "包裹確保類"
+		,"tSS_LootSecure_AutoSet_D"			: "包裹確保類：替換顯示訊息，避免沒完沒了的訊息框跟音效"
+		,"tSS_GodBlessYou_AutoSet_T"		: "倒地复原類"
+		,"tSS_GodBlessYou_AutoSet_D"		: "倒地复原類：逮捕上銬、彌留之際、電擊痙攣、踢倒在地"
+		
 	/* 快速小選單 */
 	,"tSS_QuickMenu_Title" 				: "塔司特腳本快速選單"
 	,"tSS_QuickMenu_Message" 			: "選擇功能"

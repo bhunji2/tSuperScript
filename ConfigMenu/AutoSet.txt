@@ -1,0 +1,10 @@
+{
+	"menu_id" 			: "tSS_options_Auto",
+	"parent_menu_id" 	: "tSS_options",
+	"title" 			: "tSS_Config_Auto",
+	"description" 		: "tSS_Config_Auto",
+	"back_callback" 	: "tSS_Close_Options",
+	"items" : [
+		{ "type" : "divider", "size" : 20 , "priority" : 1 }
+	]
+}

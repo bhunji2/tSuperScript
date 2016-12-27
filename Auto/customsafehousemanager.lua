@@ -1,4 +1,5 @@
 
+if not tSuperScriptFuncAuto:Get("CustomSafehouse") then return end
 
 function CustomSafehouseManager:can_afford_room_tier(room_id, tier) return true end
 function CustomSafehouseManager:can_afford_tier(tier) 				return true end

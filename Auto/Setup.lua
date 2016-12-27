@@ -145,8 +145,6 @@ end)
 
 if _G.tSuperScriptSet["TextUpper"] == true then utf8.to_upper = function(text) return text end end
 
---table.sort(sorted)
-
 ------------------------------------------------------------------------------------------------------------------------
 
 --[[

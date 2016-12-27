@@ -42,11 +42,11 @@ if Perks 		> 0 	then managers.skilltree._global.specializations.points = Perks  
 ---------------------------------------------------------------------------------------------------------------------------
 local SubPath = tSuperScript.Dir .. "/SubFunction/"
 if IsInGame() and IsPlaying() then
-	if _G.tSuperScriptSet["MaskOff"		] == true then dofile(SubPath.."PlayerMaskOffstarter.lua") 	end
-	if _G.tSuperScriptSet["MarkEnemies"	] == true then dofile(SubPath.."MarkEnemies.lua") 			end
-	if _G.tSuperScriptSet["Carrymods"	] == true then dofile(SubPath.."CarryMods.lua") 			end
-	if _G.tSuperScriptSet["SecureBag"	] == true then dofile(SubPath.."SecureBag.lua") 			end
-	if _G.tSuperScriptSet["MarkObject"	] == true then dofile(SubPath.."waypoints.lua") 			end
+	if _G.tSuperScriptSet["MaskOff"		] then dofile(SubPath.."PlayerMaskOffstarter.lua") 	end
+	if _G.tSuperScriptSet["MarkEnemies"	] then dofile(SubPath.."MarkEnemies.lua") 			end
+	if _G.tSuperScriptSet["Carrymods"	] then dofile(SubPath.."CarryMods.lua") 			end
+	if _G.tSuperScriptSet["SecureBag"	] then dofile(SubPath.."SecureBag.lua") 			end
+	if _G.tSuperScriptSet["MarkObject"	] then dofile(SubPath.."waypoints.lua") 			end
 	dofile(SubPath.."WeaponMods.lua")
 	dofile(SubPath.."PlayerMods.lua")
 	dofile(SubPath.."SuperJump.lua")
@@ -54,6 +54,7 @@ if IsInGame() and IsPlaying() then
 	dofile(SubPath.."SentryGun.lua")
 	dofile(SubPath.."ItemFinder.lua")
 	dofile(SubPath.."JobMapFunc.lua")
+	dofile(SubPath.."GodBlessYou.lua")
 end
 
 ---------------------------------------------------------------------------------------------------------------------------
@@ -88,6 +89,8 @@ tSuperScript.InteractIgnoreList = {
 	, "open_from_inside"--裡面開門?
 }
 
+
+if tSuperScriptFuncAuto:Get("LootSecure") then
 function LootManager:_present(carry_id, multiplier)
 	local real_value 	= 0
 	local is_small_loot = not not tweak_data.carry.small_loot[carry_id]
@@ -102,6 +105,7 @@ function LootManager:_present(carry_id, multiplier)
 		AMOUNT 			= managers.experience:cash_string(real_value)
 	})
 	showH(text)
+end
 end
 
 -- http://www.unknowncheats.me/forum/payday-2/122896-re-enable-crazy-firerate-grenade-launcher.html
@@ -227,31 +231,6 @@ function CopLogicSniper.enter( data, new_logic_name, enter_params )
 	end
 end
 	_onSniperEnter(data, new_logic_name, enter_params)
-end
-
-function GodBlessYou()
-	managers.player:set_player_state( "standard" )
-	showH("v(^=.=^)v God Bless You v(^=.=^)v")
-	local player = managers.player:player_unit()
-	if not player then return end
-	player:base():replenish()
-end
-
---coregamestatemachine.lua
-if not _GameStateMachine_change_state then _GameStateMachine_change_state = GameStateMachine.change_state end
-function GameStateMachine:change_state(state, params)
-	_GameStateMachine_change_state(self,state, params) 
-	--showS(self._current_state:name())
-	--showS("state change:"..state._name)
-	--ingame_fatal			未知：??
-	
-	if 	NoArrested  ~= true then return end
-	if 	state._name == "ingame_arrested"		or 		-- 逮捕上銬
-		state._name == "ingame_bleed_out" 		or 		-- 彌留之際
-		state._name == "ingame_electrified" 	or 		-- 電擊痙攣
-		state._name == "ingame_incapacitated" 	then 	-- 踢倒在地
-			GodBlessYou()
-	end
 end
 
 --No Custody

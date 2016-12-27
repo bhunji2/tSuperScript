@@ -1,5 +1,5 @@
 
-
+if not tSuperScriptFuncAuto:Get("Preplanning") then return end
 
 --Free Favors
 function PrePlanningManager:get_type_budget_cost(type, default)	return 0 end

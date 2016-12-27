@@ -3,32 +3,37 @@
 	"description" 	: "Tast's Super Script",
 	"author" 		: "Tast",
 	"contact" 		: "http://bbs.3dmgame.com/thread-5324774-1-1.html",
-	"version" 		: "1.61.0.3",
+	"version" 		: "1.61.0.4",
 	"hooks": [
-		{"hook_id": "core/lib/setups/coresetup"			,"script_path": "Auto/Setup.lua"					},
+		/* Updater */
 		{"hook_id": "lib/entry"							,"script_path": "Auto/update_mod.lua"				},
+		/* Initialize Setup */
+		{"hook_id": "core/lib/setups/coresetup"			,"script_path": "Auto/Setup.lua"					},
+		/* Menus Setting */
 		{"hook_id": "lib/managers/menumanager"			,"script_path": "ConfigMenu/Menu.lua"   			},
-		{"hook_id": "lib/managers/experiencemanager"	,"script_path": "Auto/ExperienceManager.lua"		},
-		
+		{"hook_id": "lib/managers/menumanager"			,"script_path": "ConfigMenu/AutoSet.lua"   			},
+		/* tSuperScript Trigger */
 		{"hook_id": "lib/states/ingamemaskoff"			,"script_path": "Auto/ingameState.lua"				},
 		{"hook_id": "lib/states/ingamestandard"			,"script_path": "Auto/ingameState.lua"				},
 		{"hook_id": "lib/states/ingamecivilian"			,"script_path": "Auto/ingameState.lua"				},
 		{"hook_id": "lib/states/ingameclean"			,"script_path": "Auto/IngameState.lua"				},
 		{"hook_id": "lib/states/ingameincapacitated"	,"script_path": "Auto/IngameState.lua"				},
 		{"hook_id": "lib/states/ingamefatalstate"		,"script_path": "Auto/IngameState.lua"				},
-		
+		/* No need Money */
 		{"hook_id": "lib/managers/missionassetsmanager"	,"script_path": "Auto/MissionAssetsManager.lua"		},
 		{"hook_id": "lib/managers/moneymanager"			,"script_path": "Auto/MoneyManager.lua"				},
 		{"hook_id": "lib/managers/preplanningmanager"	,"script_path": "Auto/PreplanningManager.lua"		},
 		{"hook_id": "lib/managers/upgradesmanager"		,"script_path": "Auto/upgradesmanager.lua"			},
-		
-		{"hook_id": "lib/managers/playermanager"		,"script_path": "Auto/playermanager.lua"			},
 		{"hook_id":"lib/managers/customsafehousemanager","script_path": "Auto/customsafehousemanager.lua"	},
+		
+		{"hook_id": "lib/managers/experiencemanager"	,"script_path": "Auto/ExperienceManager.lua"		},
+		{"hook_id": "lib/managers/playermanager"		,"script_path": "Auto/playermanager.lua"			},
 		{"hook_id": "lib/managers/hudmanagerpd2"		,"script_path": "Auto/InGameMap.lua"				},
+		{"hook_id": "lib/states/ingamewaitingforplayers","script_path": "Auto/SecureBodyBags.lua"			}
 		
-		{"hook_id": "lib/states/ingamewaitingforplayers","script_path": "SubFunction/SecureBodyBags.lua"	},
-		
+		/* Backup
 		{"hook_id": "lib/units/enemies/cop/logics/coplogicidle","script_path": "Auto/Logic.lua"				}
+		*/
 		
 	],
 	"persist_scripts" : [
