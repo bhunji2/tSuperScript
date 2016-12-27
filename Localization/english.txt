@@ -122,7 +122,20 @@
 		,"Config_InGameMapRotate_Desc"		: "Rotate In Game Mini Map"
 		,"Config_InGameMapZoom_Title"		: "Map Size"
 		,"Config_InGameMapZoom_Desc"		: "In Game Map Size Default : 1.0 "
-		
+	
+	,"tSS_Config_Auto"				: "Auto Trigger"
+		,"tSS_CustomSafehouse_AutoSet_T"	: "SafeHouse"
+		,"tSS_CustomSafehouse_AutoSet_D"	: "No any cost , Autocomplete Challenge , get All trophy"
+		,"tSS_MissionAssets_AutoSet_T"		: "MissionAssets"
+		,"tSS_MissionAssets_AutoSet_D"		: "No any cost , can unlock all"
+		,"tSS_Preplanning_AutoSet_T"		: "Preplaning"
+		,"tSS_Preplanning_AutoSet_D"		: "No any cost , can unlock all"
+		,"tSS_ProJob_AutoSet_T"				: "ProJob"
+		,"tSS_ProJob_AutoSet_D"				: "No any cost"
+		,"tSS_LootSecure_AutoSet_T"			: "Secure Bags"
+		,"tSS_LootSecure_AutoSet_D"			: "Change message type"
+		,"tSS_GodBlessYou_AutoSet_T"		: "Auto relive"
+		,"tSS_GodBlessYou_AutoSet_D"		: "Relive：arrested , bleed_out , electrified , incapacitated"
 	
 	,"tSS_QuickMenu_Title" 			: "tSuper Script Quick Menu"
 	,"tSS_QuickMenu_Message" 		: "Choose a function"
