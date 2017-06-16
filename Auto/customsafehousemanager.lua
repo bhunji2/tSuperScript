@@ -7,6 +7,7 @@ function CustomSafehouseManager:get_next_upgrade_cost(room_id)		return 0	end
 function CustomSafehouseManager:get_upgrade_cost(room_id, tier)		return 0	end
 function CustomSafehouseManager:can_afford_any_upgrade()			return true end
 function CustomSafehouseManager:is_trophy_unlocked(id)				return true end
+function CustomSafehouseManager:deduct_coins(amount)							end
 
 --[[ * Give All Challenges v1 by gir489
 	 *

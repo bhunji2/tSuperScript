@@ -1,6 +1,6 @@
 -- Free job purchase
 if tSuperScriptFuncAuto:Get("ProJob") then
-	function MoneyManager:get_cost_of_premium_contract(job_id, difficulty) return 0 end
+	function MoneyManager:get_cost_of_premium_contract(job_id, difficulty_id) return 0 end
 end
 
 -- Free Preplanning

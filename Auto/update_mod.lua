@@ -87,6 +87,7 @@ function LuaModUpdates:VerifyVersion_tSS(current,new)
 	for v in string.gmatch(current	, "%d+") do table.insert(curVerS, v) end
 	for v in string.gmatch(new		, "%d+") do table.insert(newVerS, v) end
 	for i, v in pairs( newVerS ) do
+		--log("newVerS" .. newVerS[i] .. " - " .. curVerS[i] )
 		if tonumber(newVerS[i]) > tonumber(curVerS[i]) then
 			return true
 		end

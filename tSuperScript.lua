@@ -1,5 +1,6 @@
 dofile(tSuperScript.Dir .. "/tCommon.lua")
 _G.tSuperScriptSet = _G.tSuperScriptSet or _G.tSuperScriptSet_Default
+if true then return end
 ------------Main Control------------
 local InfiniteCableTies	= _G.tSuperScriptSet["InfiniteCableTies"]	
 local InfiniteEquipment	= _G.tSuperScriptSet["InfiniteEquipment"]		
@@ -56,7 +57,6 @@ if IsInGame() and IsPlaying() then
 	dofile(SubPath.."JobMapFunc.lua")
 	dofile(SubPath.."GodBlessYou.lua")
 end
-
 ---------------------------------------------------------------------------------------------------------------------------
 
 tSuperScript.InteractIgnoreList = { 

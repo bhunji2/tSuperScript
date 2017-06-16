@@ -1,4 +1,5 @@
 
+if true return end
 
 function ASP() managers.skilltree:_set_points(1000) end
 
