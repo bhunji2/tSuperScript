@@ -54,6 +54,8 @@ _G.tSuperScriptSet_Default = {
 ,["InGameMap"]			= true	-- 擁有前置計畫的地圖可顯示遊戲中小地圖
 ,["InGameMapRotate"]	= true	-- 遊戲中小地圖是否隨著視線轉向
 ,["InGameMapZoom"]		= 1.0	-- 遊戲中小地圖縮放大小，預設：1.0
+
+,["NukeOption"]			= 1		-- 天啟核彈攻擊對象( 雙向、敵人、人質 )
 }
 
 -- %appdata%\..\Local\PAYDAY 2

@@ -64,8 +64,8 @@ tSuperScript.InteractIgnoreList = {
 	, "access_camera_y_axis"--觀看監視器
 	, "bag_zipline"		--袋子滑索
 	, "hostage_move"	--人質移動
-	, "intimidate"		--威嚇
-	, "hostage_stay"	--人質趴下
+	--, "intimidate"		--威嚇
+	--, "hostage_stay"	--人質趴下
 	, "driving_drive"	--開車
 	, "ammo_bag"		--彈藥包
 	, "doctor_bag"		--醫療包

@@ -122,6 +122,11 @@
 		,"Config_InGameMapRotate_Desc"		: "Rotate In Game Mini Map"
 		,"Config_InGameMapZoom_Title"		: "Map Size"
 		,"Config_InGameMapZoom_Desc"		: "In Game Map Size Default : 1.0 "
+		,"Config_tSS_NukeOption_Title"		: "Nuke Target"
+		,"Config_tSS_NukeOption_Desc"		: "Choose nuke target is both or enemies/civilians"
+			,"tSS_NukeOption_1"					: "civilians + enemies"
+			,"tSS_NukeOption_2"					: " enemies "
+			,"tSS_NukeOption_3"					: " civilians "
 	
 	,"tSS_Config_Auto"				: "Auto Trigger"
 		,"tSS_CustomSafehouse_AutoSet_T"	: "SafeHouse"

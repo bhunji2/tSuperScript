@@ -1,4 +1,6 @@
 if not _G.tSuperScriptNukeNum then _G.tSuperScriptNukeNum = 0 end
+--dofile(tSuperScript.Dir .. "/tCommon.lua")
+--log(tostring(tSuperScriptSet["NukeOption"]))
 
 function nukeunit(pawn)
 	local col_ray 		= { }
@@ -12,17 +14,17 @@ function nukeunit(pawn)
 	pawn.unit:character_damage():damage_explosion(action_data)
 end
 
-function NukeStart()
-	if not managers.platform:presence() == "Playing" 	then return end
-	if not _G.tSuperScriptNuke 							then return end
-	-- civilians
+function NukeCivilians()
 	local total_civilians = 0
 	for u_key,u_data in pairs(managers.enemy:all_civilians()) do 
 		nukeunit(u_data) 
 		total_civilians = total_civilians + 1
 		_G.tSuperScriptNukeNum = _G.tSuperScriptNukeNum + 1
 	end
-	-- enemies
+	return total_civilians
+end
+
+function NukeEnemies()
 	local total_enemies = 0
 	for u_key,u_data in pairs(managers.enemy:all_enemies()) do
 		u_data.char_tweak.has_alarm_pager = nil
@@ -30,15 +32,28 @@ function NukeStart()
 		total_enemies = total_enemies + 1
 		_G.tSuperScriptNukeNum = _G.tSuperScriptNukeNum + 1
 	end
+	return total_enemies
+end
 
-	local total = total_civilians + total_enemies
+function NukeStart()
+	if not managers.platform:presence() == "Playing" 	then return end
+	if not _G.tSuperScriptNuke 							then return end
+	
+	local NukeOptionSet 	= tSuperScriptSet["NukeOption"]
+	local total_civilians 	= 0
+	local total_enemies 	= 0
+	if NukeOptionSet == 1 or NukeOptionSet == 3 then total_civilians = NukeCivilians() 	end
+	if NukeOptionSet == 1 or NukeOptionSet == 2 then total_enemies	 = NukeEnemies()	end
+	
 	--[[
 	if total > 0 then
 		managers.chat:_receive_message(1, "Nuke", "Total:"..tostring(_G.tSuperScriptNukeNum).." - ".."Killed:"..tostring(total), tweak_data.system_chat_color)
 	end
 	]]
 
-	if managers.hud then managers.hud:show_hint( { text = "Killed:"..tostring(_G.tSuperScriptNukeNum).."+"..tostring(total) } ) end
+	if managers.hud then 
+		managers.hud:show_hint({text = 	"Killed:"..tostring(_G.tSuperScriptNukeNum).."+"..tostring(total_civilians + total_enemies) })
+	end
 
 	if _G.tSuperScriptNuke == true then
 		DelayedCalls:Add( "NukeStarting", 4.0, NukeStart )

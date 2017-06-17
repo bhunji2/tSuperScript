@@ -78,6 +78,21 @@
 			"max" 			: 4.0,
 			"min" 			: 0.5,
 			"step" 			: 0.1
+		},
+		{ "type" : "divider", "size" : 20 },
+		{
+			"type" 			: "multiple_choice",
+			"id" 			: "tSS_NukeOption",
+			"title" 		: "Config_tSS_NukeOption_Title",
+			"description" 	: "Config_tSS_NukeOption_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"items" 		: [
+				"tSS_NukeOption_1",
+				"tSS_NukeOption_2",
+				"tSS_NukeOption_3"
+			],
+			"value"			: "NukeOption",
+			"default_value" : 1
 		}
 	]
 }

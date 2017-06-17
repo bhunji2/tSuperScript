@@ -122,6 +122,11 @@
 		,"Config_InGameMapRotate_Desc"		: "遊戲中小地圖是否隨著玩家視線轉向"
 		,"Config_InGameMapZoom_Title"		: "遊戲中小地圖大小縮放"
 		,"Config_InGameMapZoom_Desc"		: "遊戲中小地圖縮放大小，預設：1.0 "
+		,"Config_tSS_NukeOption_Title"		: "天啟核彈對象類型"
+		,"Config_tSS_NukeOption_Desc"		: "選擇殺死：所有人 / 敵人 / 市民"
+			,"tSS_NukeOption_1"					: "市民 + 敵人"
+			,"tSS_NukeOption_2"					: " 敵人 "
+			,"tSS_NukeOption_3"					: " 市民 "
 		
 	,"tSS_Config_Auto"				: "自動觸發"
 		,"tSS_CustomSafehouse_AutoSet_T"	: "自訂安全屋"

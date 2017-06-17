@@ -122,6 +122,11 @@
 		,"Config_InGameMapRotate_Desc"		: "游戏中小地图是否随着玩家视线转向"
 		,"Config_InGameMapZoom_Title"		: "游戏中小地图大小缩放"
 		,"Config_InGameMapZoom_Desc"		: "游戏中小地图缩放大小，预设：1.0 "
+		,"Config_tSS_NukeOption_Title"		: "天启核弹对象类型"
+		,"Config_tSS_NukeOption_Desc"		: "选择杀死：所有人 / 敌人 / 市民"
+			,"tSS_NukeOption_1"					: "市民 + 敌人"
+			,"tSS_NukeOption_2"					: " 敌人 "
+			,"tSS_NukeOption_3"					: " 市民 "
 		
 	,"tSS_Config_Auto"				: "自动触发"
 		,"tSS_CustomSafehouse_AutoSet_T"	: "自定义安全屋"
