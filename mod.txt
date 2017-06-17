@@ -3,7 +3,7 @@
 	"description" 	: "Tast's Super Script",
 	"author" 		: "Tast",
 	"contact" 		: "http://bbs.3dmgame.com/thread-5324774-1-1.html",
-	"version" 		: "1.72.257.22",
+	"version" 		: "1.72.257.23",
 	"hooks": [
 		/* Updater */
 		{"hook_id": "lib/entry"							,"script_path": "Auto/update_mod.lua"				},

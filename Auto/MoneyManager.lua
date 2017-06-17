@@ -1,3 +1,11 @@
+
+-- deduct Forbidden
+function MoneyManager:deduct_from_offshore(amount) 	end
+function MoneyManager:_deduct_from_offshore(amount) end
+function MoneyManager:deduct_from_spending(amount)	end
+function MoneyManager:_deduct_from_total(amount)	end
+function MoneyManager:deduct_from_total(amount)		end
+
 -- Free job purchase
 if tSuperScriptFuncAuto:Get("ProJob") then
 	function MoneyManager:get_cost_of_premium_contract(job_id, difficulty_id) return 0 end
