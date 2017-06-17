@@ -147,9 +147,9 @@ if _G.tSuperScriptSet["TextUpper"] == true then
 	oldTo_upper = oldTo_upper or utf8.to_upper
 	utf8.to_upper = function(text) 
 		--log(type(text) .. " : " .. tostring(text))
-		if tostring(text) == "short" then return oldTo_upper(text) end
-		if tostring(text) == "medium" then return oldTo_upper(text) end
-		if tostring(text) == "long" then return oldTo_upper(text) end
+		if tostring(text) == "short" 	then return oldTo_upper(text) end
+		if tostring(text) == "medium" 	then return oldTo_upper(text) end
+		if tostring(text) == "long" 	then return oldTo_upper(text) end
 		return text 
 	end 
 end
