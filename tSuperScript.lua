@@ -40,22 +40,23 @@ if Perks 		> 0 	then managers.skilltree._global.specializations.points = Perks  
 ---------------------------------------------------------------------------------------------------------------------------
 local SubPath = tSuperScript.Dir .. "/SubFunction/"
 if IsInGame() and IsPlaying() then
-	if _G.tSuperScriptSet["MaskOff"		] then dofile(SubPath.."PlayerMaskOffstarter.lua") 	end
-	if _G.tSuperScriptSet["MarkEnemies"	] then dofile(SubPath.."MarkEnemies.lua") 			end
-	if _G.tSuperScriptSet["Carrymods"	] then dofile(SubPath.."CarryMods.lua") 			end
-	if _G.tSuperScriptSet["SecureBag"	] then dofile(SubPath.."SecureBag.lua") 			end
-	if _G.tSuperScriptSet["MarkObject"	] then dofile(SubPath.."waypoints.lua") 			end
-	dofile(SubPath.."WeaponMods.lua")
-	dofile(SubPath.."PlayerMods.lua")
-	dofile(SubPath.."SuperJump.lua")
-	dofile(SubPath.."StealthMods.lua")
-	dofile(SubPath.."SentryGun.lua")
-	dofile(SubPath.."ItemFinder.lua")
-	dofile(SubPath.."JobMapFunc.lua")
-	dofile(SubPath.."GodBlessYou.lua")
+	local files = file.GetFiles( tSuperScript.Dir .. "SubFunction/" )
+	for i, file in ipairs(files) do
+		--showD(tostring(i) .. " : " .. tostring(file))
+		dofile(SubPath .. file)
+	end
 end
 ---------------------------------------------------------------------------------------------------------------------------
-
+--[[
+for k, v in pairs(tweak_data.vehicle) do
+	showD(k)
+	--showD(v.max_speed)
+	--showD(v.max_rpm)
+	
+	tweak_data.vehicle[v].max_speed = 300
+	tweak_data.vehicle[v].max_rpm = 9000
+end
+]]
 tSuperScript.InteractIgnoreList = { 
 	  "sc_tape_loop" 	--干擾監視器?
 	, "access_camera"	--觀看監視器
@@ -327,3 +328,9 @@ showS("Super Script v"..tVersion.." By Tast ( BLT )")
 
 --Quick Melee Charge (Near Instant)
 --http://www.unknowncheats.me/forum/payday-2/120656-quick-melee-charge-near-instant.html
+
+--Infinite ECM script
+--https://www.unknowncheats.me/forum/payday-2-a/179564-infinite-ecm-script.html
+
+--Infinite sentry ammo code crash
+--https://www.unknowncheats.me/forum/payday-2-a/209260-infinite-sentry-ammo-code-crash.html

@@ -1,4 +1,7 @@
 --https://bitbucket.org/gir489/pd2-hecks/src/5807d0e273c20771750bd61599fbab9b3cfdeb18/Waypoints/?at=master
+
+if not tSuperScriptSet["MarkObject"] then return end
+
 -----------------------------------------
 ---     Waypoints by gir489 v2.7      ---
 -----------------------------------------

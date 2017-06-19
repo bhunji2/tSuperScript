@@ -32,6 +32,8 @@ _G.tSuperScriptSet_Default = {
 ,["ShieldKnock"]		= true	-- 盾牌擊退
 ,["ShootStagger"]		= true	-- 擊退效果擴大至倒地，包括近戰攻擊
 ,["ShootSuppression"]	= true	-- 開槍震撼敵人(僅限於部分敵人種類)
+,["AntiFlashGrenade"]	= true	-- 完全去除閃光彈特效
+,["AntiSmokeGrenade"]	= true	-- 完全去除煙霧彈特效
 --[[ 機槍塔 ]]--
 ,["SentryGunGodMode"]	= true	-- 機槍塔無敵模式
 ,["SentryGunSpread"]	= true  -- 機槍塔關閉散射
@@ -113,7 +115,9 @@ function tSuperScriptFunc:Load()
 end
 
 function tSuperScriptFunc:Save(VarName,VarValue)
-	if VarName and VarValue then _G.tSuperScriptSet[VarName] = VarValue end
+	if VarName ~= nil and VarValue ~= nil then 
+		tSuperScriptSet[VarName] = VarValue 
+	end
 	
 	local file = io.open(SavePath.."tSuperScript.txt", "w+")
 	if not file then 
@@ -121,7 +125,19 @@ function tSuperScriptFunc:Save(VarName,VarValue)
 		return false 
 	end
 	
-	file:write(json.encode(_G.tSuperScriptSet))
+	local firstLine = " "
+	file:write("{")
+	for k, v in pairs(tSuperScriptSet) do
+		--file:write("\nk:" .. tostring(k))
+		--file:write("\nv:" .. tostring(v))
+		local txts = string.format('\n\n\t%s"%s":%s',firstLine,tostring(k),tostring(v))
+		local help = string.format('\n/* %s */',GetLocText("Config_" .. tostring(k) .. "_Title"))
+		file:write( txts .. help )
+		firstLine = ","
+	end
+	file:write("\n}")
+	
+	--file:write(json.encode(tSuperScriptSet))
 	file:close()
 	return true
 end
@@ -138,7 +154,6 @@ function tSuperScriptFunc:GetData(VarName)
 end
 
 tSuperScriptFunc:Load()
-
 ------------------------------------------------------------------------------------------------------------------------
 
 Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_tSuperScript", function(loc)
@@ -153,8 +168,8 @@ end)
 -- function CrimeSpreeMissionButton:update_info_text(mission_data) 
 -- local timer_text = managers.localization:get_default_macro("BTN_SPREE_" .. utf8.to_upper(category))
 if _G.tSuperScriptSet["TextUpper"] == true then 
-	oldTo_upper = oldTo_upper or utf8.to_upper
-	utf8.to_upper = function(text) 
+	oldTo_upper 	= oldTo_upper or utf8.to_upper
+	utf8.to_upper 	= function(text) 
 		--log(type(text) .. " : " .. tostring(text))
 		if tostring(text) == "short" 	then return oldTo_upper(text) end
 		if tostring(text) == "medium" 	then return oldTo_upper(text) end
@@ -179,9 +194,12 @@ end
 --log(tostring(Table_Test))
 
 
-
-
-
+--[[
+-- https://payday-2-blt-docs.readthedocs.io/en/latest/lua/hooks/
+Hooks:PreCall( PlayerManager, "init", "TestPrePlayerManagerInit", function(ply)
+    log("PlayerManager Pre-initialized")
+end )
+]]
 
 
 --if true then return end

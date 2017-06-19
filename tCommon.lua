@@ -65,7 +65,16 @@ function GetMetaData(VarName,path)
 	return JsonCode[VarName]
 end
 
-
+------------------------------------------------------------------------------------------------------------------------
+--Random Chance to choose
+--math.randomseed(os.time())
+--n = math.random(10)
+-- https://stackoverflow.com/questions/2986179/lua-random-percentage
+function randomChange(percent) 				-- returns true a given percentage of calls
+	assert(percent >= 0 and percent <= 100) -- sanity check
+	return percent >= math.random(1, 100)   
+	-- 1 succeeds 1%, 50 succeeds 50%, 100 always succeeds, 0 always fails
+end
 
 
 

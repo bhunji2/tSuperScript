@@ -1,3 +1,5 @@
+dofile(tSuperScript.Dir .. "/tCommon.lua")
+
 -- God Mode
 if _G.tSuperScriptSet["GodMode"] == true then
 	managers.player:player_unit():character_damage():set_invulnerable( true )
@@ -31,10 +33,12 @@ PlayerManager	. selected_equipment_deploy_timer = function(self) return 0.1 	end
 PlayerManager	. chk_minion_limit_reached 		= function(self) return false 	end
 
 -- Instant interaction Bug with Drive?
-if not _getTimer then _getTimer = BaseInteractionExt._get_timer end
+--if not _getTimer then _getTimer = BaseInteractionExt._get_timer end
 function BaseInteractionExt:_get_timer() 
 	--showD(self.tweak_data)
-	if self.tweak_data == "driving_drive" then return 0.001 end
+	--showD(self._tweak_data.timer)
+	--return _getTimer(self)
+	if self.tweak_data == "driving_drive" then return 0.1 end
 	return 0
 end
 

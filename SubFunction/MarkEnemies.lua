@@ -1,5 +1,7 @@
 --lib\units\contourext.lua
 
+if not tSuperScriptSet["MarkEnemies"] then return end
+
 --Stealth Suite Beta Release v0.3
 --https://www.unknowncheats.me/forum/downloads.php?do=file&id=11670
 function isHostage(unit)

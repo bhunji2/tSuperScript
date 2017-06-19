@@ -1,29 +1,19 @@
 dofile(tSuperScript.Dir .. "/tCommon.lua")
 log("tScript TEST")
 
-for u_key,u_data in pairs(managers.enemy:all_enemies()) do
-	--log(tostring(u_data.unit.play_redirect))
-	--SaveTable( u_data.unit, "u_data.ini" )
-	u_data.unit.play_redirect(Idstring("light_hurt"),nil)
-	return
+
+
+
+for k, v in pairs(tweak_data.vehicle) do
+	showD(k)
+	
+	
+	tweak_data.vehicle[k].max_speed = 99000
+	tweak_data.vehicle[k].max_rpm = 99000
+	
+	showD(v.max_speed)
+	showD(v.max_rpm)
 end
-
-log("play_state")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

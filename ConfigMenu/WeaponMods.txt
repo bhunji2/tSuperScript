@@ -87,7 +87,26 @@
 			"callback" 		: "callback_tSS_ValueSet"
 		},
 		{ "type" : "divider", "size" : 20 },
+		{	/* 完全去除榴彈特效 */
+			"type" 			: "toggle",
+			"id" 			: "tSS_AntiFlashGrenade",
+			"title" 		: "Config_AntiFlashGrenade_Title",
+			"description" 	: "Config_AntiFlashGrenade_Desc",
+			"value" 		: "AntiFlashGrenade",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
 		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_AntiSmokeGrenade",
+			"title" 		: "Config_AntiSmokeGrenade_Title",
+			"description" 	: "Config_AntiSmokeGrenade_Desc",
+			"value" 		: "AntiSmokeGrenade",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{ "type" : "divider", "size" : 20 },
+		{	/* SentryGunMode */
 			"type" 			: "toggle",
 			"id" 			: "tSS_SentryGunGodMode",
 			"title" 		: "Config_SentryGunGodMode_Title",

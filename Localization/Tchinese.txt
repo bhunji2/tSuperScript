@@ -68,6 +68,10 @@
 		,"Config_ShootStagger_Desc" 		: "擊退效果擴大至倒地且不限警盾、近戰攻擊"
 		,"Config_ShootSuppression_Title" 	: "開槍震撼敵人"
 		,"Config_ShootSuppression_Desc" 	: "開槍震撼敵人 ( 僅限於部分敵人種類 ) "
+		,"Config_AntiFlashGrenade_Title" 	: "完全去除閃光彈特效"
+		,"Config_AntiFlashGrenade_Desc" 	: "完全去除閃光彈特效"
+		,"Config_AntiSmokeGrenade_Title" 	: "完全去除煙霧彈特效"
+		,"Config_AntiSmokeGrenade_Desc" 	: "完全去除煙霧彈特效"
 		
 		,"Config_SentryGunGodMode_Title" 	: "機槍塔無敵模式"
 		,"Config_SentryGunGodMode_Desc" 	: "機槍塔無敵模式"

@@ -68,6 +68,10 @@
 		,"Config_ShootStagger_Desc" 		: "target will get Stagger by shoot"
 		,"Config_ShootSuppression_Title" 	: "Shoot Enemy Suppression"
 		,"Config_ShootSuppression_Desc" 	: "Shoot Enemy Suppression"
+		,"Config_AntiFlashGrenade_Title" 	: "Anti Flash Grenade"
+		,"Config_AntiFlashGrenade_Desc" 	: "fully Anti Flash Grenade"
+		,"Config_AntiSmokeGrenade_Title" 	: "Anti Smoke Grenade"
+		,"Config_AntiSmokeGrenade_Desc" 	: "fully Anti Smoke Grenade"
 		
 		,"Config_SentryGunGodMode_Title" 	: "Sentry Gun God Mode"
 		,"Config_SentryGunGodMode_Desc" 	: "Sentry Gun God Mode"

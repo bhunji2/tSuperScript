@@ -1,3 +1,5 @@
+if not tSuperScriptSet["Debug"] then return end
+
 dofile(tSuperScript.Dir .. "/tCommon.lua")
 
 --https://www.unknowncheats.me/forum/payday-2-a/116345-unit-name-crosshair.html

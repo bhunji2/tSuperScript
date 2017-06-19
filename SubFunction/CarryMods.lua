@@ -1,3 +1,6 @@
+
+if not tSuperScriptSet["Carrymods"] then return end
+
 -- Support all Carry types
 for name, i in pairs(tweak_data.carry.types) do
 	--showD(tostring(k).. " : " ..tostring(v))

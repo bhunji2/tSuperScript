@@ -1,4 +1,6 @@
 --function PlayerMaskOffstarter()
+dofile(tSuperScript.Dir .. "/tCommon.lua")
+if not tSuperScriptSet["MaskOff"] then return end
 
 function IsInGame() 
   if not game_state_machine then return false end 
@@ -43,8 +45,28 @@ function PlayerMaskOff:_update_check_actions( t, dt )
 	if not new_action then new_action = self:_check_action_interact( t, input ) end
 	self:_check_action_jump( t, input )
 	self:_check_action_duck( t, input )
+	-- Here is some function insertion to working
+	--self:_check_action_run(t, input)
 end
-
+--[[
+function PlayerMaskOff:_check_action_run(t, input)
+	showD("PlayerMaskOff:_check_action_run")
+	if self._setting_hold_to_run and input.btn_run_release or self._running and not self._move_dir then
+		self._running_wanted = false
+		if self._running then
+			self:_end_action_running(t)
+		end
+	elseif not self._setting_hold_to_run and input.btn_run_release and not self._move_dir then
+		self._running_wanted = false
+	elseif input.btn_run_press or self._running_wanted then
+		if not self._running or self._end_running_expire_t then
+			self:_start_action_running(t)
+		elseif self._running and not self._setting_hold_to_run then
+			self:_end_action_running(t)
+		end
+	end
+end
+]]
 function PlayerMaskOff:_check_action_interact( t, input )
 	local new_action,timer,interact_object
 	local interaction_wanted = input.btn_interact_press
@@ -73,7 +95,7 @@ function PlayerMaskOff:_check_action_interact( t, input )
 	
 	return new_action
 end
-
+--[[ cause interaction need more time.
 function PlayerStandard:_start_action_interact( t, input, timer, interact_object )
 	self._interact_expire_t = t + timer
 	self._interact_params = { object = interact_object, timer = timer, tweak_data = interact_object:interaction().tweak_data }
@@ -82,6 +104,30 @@ function PlayerStandard:_start_action_interact( t, input, timer, interact_object
 	self._unit:base():set_detection_multiplier( "interact", 0.5 )
 	
 	managers.network:session():send_to_peers_loaded( "sync_teammate_progress", 1, true, self._interact_params.tweak_data, timer, false )
+end
+]]
+
+-- taken from PlayerStandard
+function PlayerMaskOff:_start_action_interact(t, input, timer, interact_object)
+	--showD("PlayerMaskOff:_start_action_interact")
+	self:_interupt_action_reload(t)
+	self:_interupt_action_steelsight(t)
+	self:_interupt_action_running(t)
+	self:_interupt_action_charging_weapon(t)
+	local final_timer = timer
+	final_timer = managers.crime_spree:modify_value("PlayerStandard:OnStartInteraction", final_timer, interact_object)
+	self._interact_expire_t = final_timer
+	local start_timer = 0
+	self._interact_params = {
+		object = interact_object,
+		timer = final_timer,
+		tweak_data = interact_object:interaction().tweak_data
+	}
+	self._ext_camera:play_redirect(self:get_animation("unequip"))
+	self._equipped_unit:base():tweak_data_anim_stop("equip")
+	self._equipped_unit:base():tweak_data_anim_play("unequip")
+	managers.hud:show_interaction_bar(start_timer, final_timer)
+	managers.network:session():send_to_peers_synched("sync_teammate_progress", 1, true, self._interact_params.tweak_data, final_timer, false)
 end
 
 function PlayerMaskOff:_end_action_interact()

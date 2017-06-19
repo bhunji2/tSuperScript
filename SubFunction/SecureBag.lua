@@ -1,5 +1,7 @@
 --Secure Bags 
 
+if not tSuperScriptSet["SecureBag"] then return end
+
 --Host use Police no pickup
 --_G.PrintTable( tweak_data.carry ) -- Host Only
 for k, v in next, tweak_data.carry do
