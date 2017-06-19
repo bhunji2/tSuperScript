@@ -6,7 +6,7 @@ _G.tSuperScriptAutoDef	= {
 	,"Preplanning"		-- 預置計畫：無花費、可解鎖
 	,"ProJob"			-- 專家任務：不需花費離岸金額
 	,"LootSecure"		-- 包裹確保：替換顯示訊息
-	,"GodBlessYou"		-- 倒地复原：逮捕上銬、彌留之際、電擊痙攣、踢倒在地
+	--,"GodBlessYou"		-- 倒地复原：逮捕上銬、彌留之際、電擊痙攣、踢倒在地
 }
 
 local AutoFilePath = SavePath .. "tSuperScript.Auto.txt"

@@ -6,8 +6,6 @@ local InfiniteEquipment	= _G.tSuperScriptSet["InfiniteEquipment"]
 local DoctorBag			= _G.tSuperScriptSet["DoctorBag"]
 local FastDrilling		= _G.tSuperScriptSet["FastDrilling"]
 local DeadCiviNone		= _G.tSuperScriptSet["DeadCiviNone"]		
-local NoArrested		= _G.tSuperScriptSet["NoArrested"]
-local NoCustody			= _G.tSuperScriptSet["NoCustody"]
 local InstantMask		= _G.tSuperScriptSet["InstantMask"]
 local InteractRange		= _G.tSuperScriptSet["InteractRange"]
 local JobShow			= _G.tSuperScriptSet["JobShow"]
@@ -64,7 +62,6 @@ tSuperScript.InteractIgnoreList = {
 	, "access_camera_y_axis"--觀看監視器
 	, "bag_zipline"		--袋子滑索
 	, "hostage_move"	--人質移動
-	--, "intimidate"		--威嚇
 	--, "hostage_stay"	--人質趴下
 	, "driving_drive"	--開車
 	, "ammo_bag"		--彈藥包
@@ -231,9 +228,6 @@ function CopLogicSniper.enter( data, new_logic_name, enter_params )
 end
 	_onSniperEnter(data, new_logic_name, enter_params)
 end
-
---No Custody
-if NoCustody == true then function PlayerManager:on_enter_custody(_player) GodBlessYou() end end
 
 -- Instant mask on
 if InstantMask == true then tweak_data.player.put_on_mask_time = 0.01 end

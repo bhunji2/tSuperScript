@@ -4,10 +4,12 @@ local MenuFiles =
 {
 	 "MainOptions"
 	,"PlayerMods"
+	,"SkillsMods"
 	,"StealthMods"
 	,"WeaponMods"
 	,"AdvOptions"
 	,"OtherSet"
+	--,"KeyBind"
 }
 
 Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_tSuperScript", function(menu_manager)

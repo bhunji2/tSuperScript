@@ -1,0 +1,19 @@
+{
+	 "menu_id" 			: "tSS_options_Skills"
+	,"parent_menu_id" 	: "tSS_options"
+	,"title" 			: "Config_Skills_Title"
+	,"description" 		: "Config_Skills_Desc"
+	,"back_callback" 	: "tSS_Close_Options"
+	,"items" 			: 
+	[
+		{
+			 "type" 		: "toggle"
+			,"id" 			: "tSS_ForcePerkSkills"
+			,"title" 		: "Config_ForcePerkSkills_Title"
+			,"description" 	: "Config_ForcePerkSkills_Desc"
+			,"value" 		: "ForcePerkSkills"
+			,"default_value": true
+			,"callback" 	: "callback_tSS_ValueSet"
+		}
+	]
+}

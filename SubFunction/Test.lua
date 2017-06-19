@@ -16,7 +16,7 @@ if col_ray then
 	managers.hud:show_hint( { text = string.sub(tostring(col_ray.unit:name():t()), 1, 10) } )
 end
 ]]
-
+--[[
 if not managers.player:player_unit() then return end
 if _showUnit then return end
 _showUnit = true
@@ -42,8 +42,4 @@ if col_ray then
 	_lastUnitIDS = col_ray.unit:name()
 	showH(tostring(col_ray.unit:name():key()) .. " : " .. tostring(col_ray.unit:id()))
 end
-
-
-
-
-
+]]

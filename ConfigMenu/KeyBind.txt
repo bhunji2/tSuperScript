@@ -1,0 +1,17 @@
+{
+	"menu_id" 			: "tSS_options_KeyBinds",
+	"parent_menu_id" 	: "tSS_options",
+	"title" 			: "Config_KeyBinds_Options",
+	"description" 		: "",
+	"back_callback" 	: "tSS_Close_Options",
+	"items" : [
+		 {
+			 "type" 		: "keybind"
+			,"id" 			: "tSS_KB_"
+			,"title" 		: "json_item_keybind"
+			,"description" 	: "json_item_keybind_desc"
+			,"keybind_id" 	: "json_menu_example_keybind"
+			,"func" 		: "func_test_keybind"
+		}
+	]
+}

@@ -31,7 +31,18 @@
 		,"Config_Upgrade_Desc" 				: "Player has PowerFull PreSet Upgrade"
 		,"Config_NoEXPshake_Title"			: "No Explosion shake"
 		,"Config_NoEXPshake_Desc"			: "No any screen shake by Explosion"
+		,"Config_CounterBOT_Title"			: "Auto Counter Cloaters (BOT)"
+		,"Config_CounterBOT_Desc"			: "Anti Cloater with BOT"
+		,"Config_CounterPlayer_Title"		: "Auto Counter Cloaters (Player)"
+		,"Config_CounterPlayer_Desc"		: "Anti Cloater with Player"
+		,"Config_CounterChance_Title"		: "Auto Counter Cloater Chance"
+		,"Config_CounterChance_Desc"		: "Auto Counter Cloater Chance 0 ~ 100"
 		
+	,"Config_Skills_Title" 				: "Skills Mods"
+	,"Config_Skills_Desc" 				: "Skills Mods"
+		,"Config_ForcePerkSkills_Title"		: "Force Perks Skills ( Restart Require )"
+		,"Config_ForcePerkSkills_Desc"		: "Use all extra perk things whateverthefucktheyrecalled at once v2"
+	
 	,"Config_StealthMods" 				: "Stealth Mods"
 		,"Config_NoPager_Title" 			: "No Pager"
 		,"Config_NoPager_Desc" 				: "Kill Guards will not tigger the pager"

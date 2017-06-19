@@ -60,7 +60,11 @@ function NewRaycastWeaponBase:fire( from_pos, direction, dmg_mul, shoot_player, 
 	if not _G.tSuperScriptSet["NoRecoil"] then return ray_res end
 end
 
-
+-- https://www.unknowncheats.me/forum/payday-2-a/200664-recoil-weapons.html
+if tSuperScriptSet["NoRecoil"] == true then
+	FPCameraPlayerBase.recoil_kick 	= function(self) return 0 end
+	PlayerCamera.play_shaker 		= function(self) return 0 end
+end
 
 
 

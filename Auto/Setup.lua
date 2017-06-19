@@ -13,6 +13,11 @@ _G.tSuperScriptSet_Default = {
 ,["NoCustody"] 			= true	-- 不被關監獄(但會被逮捕等待讀秒)
 ,["Upgrade"]			= true 	-- 強制技能可用(不需設定)
 ,["NoEXPshake"]			= true	-- 炸類特效不會造成螢幕晃動
+,["CounterBOT"]			= true	-- 電腦格擋Cloaker
+,["CounterPlayer"]		= true	-- 玩家格擋Cloaker
+,["CounterChance"]		= 100	-- 反踢機率
+-- Skills Mods
+,["ForcePerkSkills"]	= true	-- 強制開啟牌組額外天賦 Perks v2 ( 作者：gir489 )
 -- Stealth Mods
 ,["GuardsCamera"]		= true 	-- 不被發現(限於自己開房)
 ,["NoPager"]			= true	-- 殺死警衛不會觸發呼叫
@@ -27,7 +32,7 @@ _G.tSuperScriptSet_Default = {
 ,["ShieldKnock"]		= true	-- 盾牌擊退
 ,["ShootStagger"]		= true	-- 擊退效果擴大至倒地，包括近戰攻擊
 ,["ShootSuppression"]	= true	-- 開槍震撼敵人(僅限於部分敵人種類)
-
+--[[ 機槍塔 ]]--
 ,["SentryGunGodMode"]	= true	-- 機槍塔無敵模式
 ,["SentryGunSpread"]	= true  -- 機槍塔關閉散射
 ,["SentryGunFireRate"]	= true	-- 機槍塔超快射速
@@ -144,7 +149,9 @@ Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_tSuperScri
 end)
 
 ------------------------------------------------------------------------------------------------------------------------
-
+-- lib / managers / menu / crimespreemissionsmenucomponent.lua
+-- function CrimeSpreeMissionButton:update_info_text(mission_data) 
+-- local timer_text = managers.localization:get_default_macro("BTN_SPREE_" .. utf8.to_upper(category))
 if _G.tSuperScriptSet["TextUpper"] == true then 
 	oldTo_upper = oldTo_upper or utf8.to_upper
 	utf8.to_upper = function(text) 

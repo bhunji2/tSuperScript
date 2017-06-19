@@ -93,6 +93,37 @@
 			"value" 		: "NoEXPshake",
 			"default_value" : true,
 			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{ "type" : "divider", "size" : 20 },
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_CounterBOT",
+			"title" 		: "Config_CounterBOT_Title",
+			"description" 	: "Config_CounterBOT_Desc",
+			"value" 		: "CounterBOT",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "toggle",
+			"id" 			: "tSS_CounterPlayer",
+			"title" 		: "Config_CounterPlayer_Title",
+			"description" 	: "Config_CounterPlayer_Desc",
+			"value" 		: "CounterPlayer",
+			"default_value" : true,
+			"callback" 		: "callback_tSS_ValueSet"
+		},
+		{
+			"type" 			: "slider",
+			"id" 			: "tSS_CounterChance",
+			"title" 		: "Config_CounterChance_Title",
+			"description" 	: "Config_CounterChance_Desc",
+			"callback" 		: "callback_tSS_ValueSet",
+			"value" 		: "CounterChance",
+			"default_value" : 100,
+			"max" 			: 100,
+			"min" 			: 0,
+			"step" 			: 1
 		}
 	]
 }

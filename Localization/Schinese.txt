@@ -31,6 +31,17 @@
 		,"Config_Upgrade_Desc" 				: "拥有强化版技能 ( 不需升级技能树即可拥有 ) [ 选单购买区无用 ]"
 		,"Config_NoEXPshake_Title"			: "炸类不晃"
 		,"Config_NoEXPshake_Desc"			: "炸类特效不会造成屏幕晃动"
+		,"Config_CounterBOT_Title"			: "自动格挡Cloater踢击 ( 计算机 )"
+		,"Config_CounterBOT_Desc"			: "自动格挡Cloater踢击 ( 计算机人 )"
+		,"Config_CounterPlayer_Title"		: "自动格挡Cloater踢击 ( 玩家 )"
+		,"Config_CounterPlayer_Desc"		: "自动格挡Cloater踢击 (  玩家  )"
+		,"Config_CounterChance_Title"		: "自动格挡Cloater踢击成功机率"
+		,"Config_CounterChance_Desc"		: "自动格挡Cloater踢击成功机率 0 ~ 100"
+	
+	,"Config_Skills_Title" 				: "技能模式"
+	,"Config_Skills_Desc" 				: "超级技能模式"
+		,"Config_ForcePerkSkills_Title"		: "全开额外天赋 Perks ( 需要重开 ) "
+		,"Config_ForcePerkSkills_Desc"		: "强制开启牌组额外天赋 v2 ( 作者：gir489 )"
 	
 	,"Config_StealthMods" 				: "潜行模式"
 		,"Config_NoPager_Title" 			: "禁止呼叫"
@@ -240,6 +251,7 @@
 	,"hold_activate_sprinklers"	: "开洒水器"
 	,"revive"					: "救起队友"
 	,"debris"					: "移除碎块"
+	,"intimidate"				: "人质捆手"
 	/* */
 	,"hold_grab_goat"			: "带走山羊"
 	,"goat_carry_drop"			: "山羊包裹"
